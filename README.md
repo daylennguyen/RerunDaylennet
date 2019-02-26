@@ -38,10 +38,11 @@
 </p>
   
 ## Features
-- [X] [🕶 gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) Stylesheet overhead reduction
-- [X] [🍌 bulma](https://bulma.io/). Bulma builds are usually ~170K but reduced 90% by purgecss.
-- [X] 🤩 Page Transitions, component-based (with no-js support)
-- [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
+- [X] [`🕶 Gatsby v2` for Static page generation](https://github.com/gatsbyjs/gatsby/projects/2) 
+- [X] [`🕶 gatsby-plugin-purgecss` for Stylesheet overhead reduction](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/)
+- [X] [`🍌 bulma` CSS baseline && Bulma builds are usually ~170K but reduced 90% by purgecss.](https://bulma.io/). 
+- [] `🤩 Page Transitions`, component-based (with no-js support)
+- [] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
   
   
 ## Prerequisites
