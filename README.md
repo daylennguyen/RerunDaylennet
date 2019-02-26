@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://daylen.net">
     <img
-      src="./read/banner2.svg"
+      src="/read/banner.svg"
       alt="daylen-web-banner"
       title="dn-banner"
     />
