@@ -1,9 +1,9 @@
 ---
-templateKey: 'index-page'
-title: 'Great coffee with a conscience'
+templateKey: "index-page"
+title: "Daylen Nguyen"
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: Web Developer from UW (Go DAWGS 🌭)
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -12,11 +12,11 @@ description: >-
 mainpitch:
   title: Why Kaldi
   description: >
-      Kaldi is the coffee store for everyone who believes that
-      great coffee shouldn't just taste good, it should do good
-      too. We source all of our beans directly from small scale
-      sustainable farmers and make sure part of the profits are
-      reinvested in their communities.
+    Kaldi is the coffee store for everyone who believes that
+    great coffee shouldn't just taste good, it should do good
+    too. We source all of our beans directly from small scale
+    sustainable farmers and make sure part of the profits are
+    reinvested in their communities.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -91,20 +91,19 @@ pricing:
         - Green or roasted beans"
         - One or two varieties of beans"
       plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+      price: "50"
+    - description: "Great for avid drinkers, java-loving couples and bigger crowds"
       items:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Big
-      price: '80'
+      price: "80"
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
         - Green or roasted beans
         - Unlimited varieties
       plan: Custom
-      price: '??'
+      price: "??"
 ---
-

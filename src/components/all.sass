@@ -1,14 +1,44 @@
 @import "~bulma/sass/utilities/initial-variables"
+// Background Pattern
+//  https://www.svgbackgrounds.com/license/
+$Background-Image: url("/img/bg-alt.svg")
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade")
 
-// Config vars
-// Kalidi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+// https://github.com/ryanoasis/nerd-fonts
+@font-face
+    font-family: "Anonymice Nerd Font Complete"
+    src: url("/fonts/Anonymice Nerd Font Complete.ttf") format("truetype")
+    font-weight: 100
+    letter-spacing: 0.1em
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+// Dracula theme
+// https://github.com/dracula/dracula-theme
+$Background: #282a36
+$Current: #44475a
+$Selection: #44475a
+$Foreground: #f8f8f2
+$Comment: #6272a4
+$Cyan: #8be9fd
+$Green: #50fa7b
+$Orange: #ffb86c
+$Pink: #ff79c6
+$Purple: #bd93f9
+$Red: #ff5555
+$Yellow: #f1fa8c
+
+// Assignment
+$primary: $Green
+$primary-invert: $Background
+$body-color: $Foreground
+$black: #282828
+
+body
+  background-color: $Background
+  background-image: $Background-Image
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -52,21 +82,21 @@ $black: #2b2523
     align-items: center
 
 .btn
-    display: inline-block;
-    padding: 12px 16px 10px;
-    font-size: 18px;
-    font-size: 1rem;
-    line-height: 1.25;
-    background-color: #fff;
-    border-radius: .25rem;
-    text-decoration: none;
-    font-weight: 700;
-    color: #CC3700;
-    text-align: center;
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700;
-    box-shadow: inset 0 0 0 2px #f40;
-    -webkit-transition: all .15s ease;
-    transition: all .15s ease;
+    display: inline-block
+    padding: 12px 16px 10px
+    font-size: 18px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: #fff
+    border-radius: .25rem
+    text-decoration: none
+    font-weight: 700
+    color: #CC3700
+    text-align: center
+    -webkit-box-shadow: inset 0 0 0 2px #CC3700
+    box-shadow: inset 0 0 0 2px #f40
+    -webkit-transition: all .15s ease
+    transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
@@ -77,7 +107,7 @@ $black: #2b2523
 .icon svg 
   width: 1.5rem
   height: 1.5rem
-  fill: currentColor;
+  fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
 footer.footer
@@ -85,13 +115,14 @@ footer.footer
   background-color: transparent
 
 //Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert	
-$menu-label-color: $white-ter
+$menu-item-color: $Background
+$navbar-background-color: $Background
+// $menu-item-hover-color: $black !important
+// $menu-item-hover-background-color: $black
+// $menu-item-active-color: $kaldi-red-invert
+// $menu-item-active-background-color:	$kaldi-red-invert
+$menu-list-border-left: 1px solid $Green	
+// $menu-label-color: $white-ter
 
 
 .menu-label
@@ -103,13 +134,13 @@ $menu-label-color: $white-ter
 .social
   padding: 2em
 .social a
-    padding: .5em .5em .3em .5em;
-    border-radius: 1em;
-    background-color: $white-ter;
-    margin: .5em;
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    display: inline;
+    padding: .5em .5em .3em .5em
+    border-radius: 1em
+    background-color: $white-ter
+    margin: .5em
+    width: 1em
+    height: 1em
+    vertical-align: middle
+    display: inline
 
 @import "~bulma"
