@@ -20,31 +20,20 @@ export const IndexPageTemplate = ({
   main
 }) => (
   <div>
-    <div
-      className='full-width-image margin-top-0'
-      style={{
-        backgroundImage: `url(${
-          image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
-      {title}
-      {subheading}
-      <h1 className='title'>{mainpitch.title}</h1>
-      <h3 className='subtitle'>{mainpitch.description}</h3>
-      <h3 className='has-text-weight-semibold is-size-2'>{heading}</h3>
-      <p>{description}</p>
-      <Features gridItems={intro.blurbs} />
-      <Link className='btn' to='/products'>
-        See all products
-      </Link>
-      <BlogRoll />
-      <Link className='btn' to='/blog'>
-        Read more
-      </Link>
-    </div>
+    {title}
+    {subheading}
+    <h1 className='title'>{mainpitch.title}</h1>
+    <h3 className='subtitle'>{mainpitch.description}</h3>
+    <h3 className='has-text-weight-semibold is-size-2'>{heading}</h3>
+    <p>{description}</p>
+    <Features gridItems={intro.blurbs} />
+    <Link className='btn' to='/products'>
+      See all products
+    </Link>
+    <BlogRoll />
+    <Link className='btn' to='/blog'>
+      Read more
+    </Link>
   </div>
 )
 

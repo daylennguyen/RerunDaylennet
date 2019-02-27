@@ -27,9 +27,7 @@
   </a>
 </p>
 
-
 </p>
-
 
 <p align="center">
   <em>Note</em>: This repo is based upon the 
@@ -44,25 +42,56 @@
 - [ ] `🤩 Page Transitions`, component-based (with no-js support)
 - [ ] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
   
-  
+## File Structure
+
+- [`src/pages/`](src/pages/)
+
+  > One may observe that much of the site data is pulled from these directories
+  > When using the Netlify CMS admin panel to creating postings, the postings made are contained within these folders.  
+  > The `.md` files are parsed (corresponding to the config.yml) for data and stored within GraphQL.
+  > This data is then queried within the our template files
+  > One should note that Gatsby translates all of the contents within this directory into pages.
+  > For instance, if we deploy and visit `https://www.website.com/contact/thanks` we will receive
+  >
+  > `TL;DR pages/ contains the data to be displayed by templates/`
+
+- [`static/admin/config.yml`](/static/admin/config.yml)
+
+  > The CMS will use this configuration to parse the `.md` files.
+  > configure/declare the interchangeable data within each page. This is core in creating re-usable page templates within Netlify CMS
+  > [Collection Types](https://www.netlifycms.org/docs/collection-types/)  
+  > [Configuration Options](https://www.netlifycms.org/docs/configuration-options/) > [Add to your site](https://www.netlifycms.org/docs/add-to-your-site/#collections)
+
+- [`src/templates/*.js`](src/templates)
+
+  > at the bottom of each template, you will see that we are creating a graphql query to retrieve the previously parsed data.
+  > Within these files we are defining how we _display_ the pages.
+
+- [`src/cms/cms.js`](src/cms/cms.js)
+  > A key step in templating your pages is to register them
+  > Once this is completed, they should be available in the admin panel.
+
 ## Prerequisites
 
 - Node (I recommend using v8.2.0 or higher)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 
 ### Access Locally
+
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
 $ yarn
 $ npm run develop
 ```
+
 To test the CMS locally, you'll need run a production build of the site:
+
 ```
 $ npm run build
 $ npm run serve
 ```
 
 ### Setting up the CMS
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
 
+Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
