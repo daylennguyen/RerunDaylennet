@@ -21,10 +21,14 @@
       alt="styled with prettier"
     />
   </a>
+  <a href="https://bulma.io">
+  <img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128" height="24">
+</a>
 <p align="center">
-  <a href="https://daylen.net">
-    <strong>Website Link</strong>
-  </a>
+  <br/>
+<a href="https://daylen.net">
+<strong>Website Link</strong>
+</a>
 </p>
 
 </p>
