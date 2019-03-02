@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
+import HomeBanner from './banner.svg'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
@@ -17,7 +17,10 @@ export const IndexPageTemplate = ({
   introBody
 }) => (
     <div>
-      <Img fluid={banner.childImageSharp.fluid} />
+      {/* <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn /> */}
+      <div class="container is-centered" >
+        <img class="is-paddingless" src={HomeBanner}/>
+      </div>
       <p>{termTitle}</p>
       <p>{termText}</p>
       <p>{introHeading}</p>
@@ -31,7 +34,7 @@ export const IndexPageTemplate = ({
     </Link>
     </div>
   )
-
+//
 IndexPageTemplate.propTypes = {
   banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   termTitle: PropTypes.string,
@@ -72,8 +75,8 @@ export const pageQuery = graphql`
       frontmatter {
         banner {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 860) {
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }

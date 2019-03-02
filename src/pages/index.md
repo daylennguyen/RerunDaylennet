@@ -1,7 +1,7 @@
 ---
 templateKey: "index-page"
 title: "maintitle"
-banner: /img/home-jumbotron.jpg
+banner: /img/ico/pika32.png
 termtitle: "Terminal"
 termtext: "I'm a term"
 intro:

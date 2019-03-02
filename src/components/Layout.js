@@ -37,29 +37,29 @@ const TemplateWrapper = ({ children }) => (
           <link
             rel="icon"
             type="image/png"
-            href="/img/favicon-32x32.png"
+            href="/img/ico/pika32.png"
             sizes="32x32"
           />
           <link
             rel="icon"
             type="image/png"
-            href="/img/favicon-16x16.png"
+            href="/img/ico/pika16.png"
             sizes="16x16"
           />
 
           <link
             rel="mask-icon"
-            href="/img/safari-pinned-tab.svg"
+            href="/img/ico/pika.svg"
             color="#ff4400"
           />
-          <meta name="theme-color" content="#fff" />
+          <meta name="theme-color" content="#282828" />
 
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
-          <meta property="og:image" content="/img/og-image.jpg" />
+          <meta property="og:image" content="/static/img/banner.svg" />
         </Helmet>
-        <Navbar />
+        {/* <Navbar /> */}
         <div>{children}</div>
         <Footer />
       </div>
