@@ -3,49 +3,70 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-// import Img from 'gatsby-image'
+import Img from 'gatsby-image'
 import HomeBanner from './banner.svg'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import Terminal from '../components/Terminal'
 
-// Query data parsed from MD as input
+// Format data, insert head img
 export const IndexPageTemplate = ({
   banner,
   termTitle,
   termText,
   introHeading,
   introBody
-}) => (
-    <div>
-      {/* <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn /> */}
+}) => {
+  // <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn />
 
-      <div class="columns is-centered" >
-        <div class="flex" >
-          <Link to='/'>
-      <div
-                className="full-width-image-container margin-top-0"
-                style={{
-                  backgroundImage: `url('/img/ysmite.jpeg')`,
-                  /* Full height */
-                  height: `100%`,
-                  /* Create the parallax scrolling effect */
-                  backgroundAttachment: `fixed`,
-                  backgroundPosition: `center top`,
-                  backgroundRepeat: `no-repeat`,
-                  padding: `3rem`
-                }}
-              >
-            <img src={HomeBanner} 
+  return (
+    <div>
+      <div className="columns"  style={{
+              backgroundImage: `url('/img/ysmite.jpeg')`,
+/* Create the parallax scrolling effect */
+              backgroundAttachment: `fixed`,
+              backgroundPosition: `center top`,
+              backgroundRepeat: `no-repeat`}}
+            >
+          <div
+            className="flexAlgnJstfyCntr margin-top-0"
             style={{
-                    backgroundColor: 'rgba(38, 38, 38, .6)',
-                    padding: '1rem',
-                  }} />
-            </div>
-          </Link>
-        </div>
+              background: `linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.75) 100%)`,
+              width:`100%`,
+              /* Full height */
+              height: `100%`,
+              padding: `3rem`,
+              flexDirection: `column`
+            }}
+          >
+            <Link to='/' className="flexAlgnJstfyCntr"
+            style={{
+                  padding: '0',
+                  margin: '0',
+                }}>
+              <img src={HomeBanner}
+                style={{
+                  backgroundColor: 'rgba(38, 38, 38, .6)',
+                  padding: '1rem',
+                  // margin: '2rem auto',
+                  marginBottom: `3rem`,
+                  width: '100%'
+                }}
+                alt="daylen.net website portfolio banner"
+              />
+            </Link>
+            <Terminal
+              name={termTitle}
+              strings={[
+                "`<strong>$ user@daylen.net ~ </strong>`Welcome to daylen.net! ^500\n" +
+                "`<strong>$ user@daylen.net ~ </strong>`I'm <strong>Daylen Nguyen</strong>^200 a <strong>photographer^200, web developer,</strong>^200\n" +
+                "`<strong>$ user@daylen.net ~ </strong>`and recent graduate from the <strong><a href='http://www.tacoma.uw.edu/'>University of Washington</a></strong>.\n"
+              ]}
+            />
+          </div>
       </div>
-      <section class="section">
-        <div class="container">
+      <section className="section">
+        <div className="container">
           <p>{termTitle}</p>
           <p>{termText}</p>
           <p>{introHeading}</p>
@@ -61,7 +82,9 @@ export const IndexPageTemplate = ({
       </section>
     </div>
   )
-//
+}
+
+// Type Validation
 IndexPageTemplate.propTypes = {
   banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   termTitle: PropTypes.string,
@@ -70,9 +93,9 @@ IndexPageTemplate.propTypes = {
   introBody: PropTypes.string,
 }
 
+// Retrieve GQL data, insert into layout_component
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
   return (
     <Layout>
       <IndexPageTemplate
