@@ -1,13 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Typed from 'typed.js'
 
 export default class Terminal extends React.Component {
 	componentDidMount() {
-		// If you want to pass more options as props, simply add
-		// your desired props to this destructuring assignment.
 		const { strings } = this.props
-		// You can pass other options here, such as typing speed, back speed, etc.
 		const options = {
 			strings: strings,
 			typeSpeed: 30 ,
@@ -17,8 +13,7 @@ export default class Terminal extends React.Component {
 		this.typed = new Typed(this.el, options)
 	}
 	componentWillUnmount() {
-		// Make sure to destroy Typed instance on unmounting
-		// to prevent memory leaks
+		// destroy Typed on unmounting to prevent memory leaks
 		this.typed.destroy()
 	}
 	render() {
@@ -26,7 +21,7 @@ export default class Terminal extends React.Component {
 		return (
 			<span className="termtext">
 				<div className="term-titlebar">
-					😺 {name}
+					<span aria-label='cat emote' role='img'>😺</span> {name}
 				</div>
 				<span className="type-wrap">
 					<span

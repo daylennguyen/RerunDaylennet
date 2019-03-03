@@ -26,12 +26,27 @@ $Pink: #ff79c6
 $Purple: #bd93f9
 $Red: #ff5555
 $Yellow: #f1fa8c
-
+$AltBg: #282a36
 // Assignment
 $primary: $Green
 $primary-invert: $Background
 $body-color: $Foreground
 $black: #282828
+
+//Menu overrides
+$navbar-height: 3.25rem
+$menu-item-color: $Cyan
+$navbar-background-color: $AltBg
+$navbar-item-color: $Comment
+$navbar-item-hover-color: $Comment
+$navbar-item-active-background-color: $Green
+$navbar-item-active-color: $Selection
+$menu-item-hover-color: $Background !important
+$menu-item-hover-background-color: $Comment
+$menu-item-active-color: $Green
+$menu-item-active-background-color:	$Green
+$menu-list-border-left: 1px solid $Green	
+$menu-label-color: $Pink
 
 body
   background-color: $Background
@@ -67,6 +82,14 @@ body
     margin-bottom: 1.5rem
     margin-top: 0
 
+@keyframes rollout
+  0%
+    height: 100px
+    margin-bottom: 150px
+  100%
+    // height: 400px
+    margin-bottom: 0px
+
 .termtext
   border-radius: 10px  
   overflow-x: hidden   
@@ -82,6 +105,7 @@ body
   box-shadow: rgba( 255, 255, 255, 0.2 ) 0px 20px 70px  
   background-color: rgba(40, 42, 54, .85)  
   height: 250px  
+  animation: rollout 1s ease-in 1
   width: 60%
 
   & .term-titlebar
@@ -99,11 +123,11 @@ body
     background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc)
   .type-wrap
     margin: 15px
-    width: 100%
   & strong
     color: $Green
     & a
       color: $Pink
+      text-decoration: underline
 
 /* width */
 ::-webkit-scrollbar
@@ -178,22 +202,16 @@ body
 .icon svg 
   width: 1.5rem
   height: 1.5rem
-  fill: currentColor
+  fill: $primary
+
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
+
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
 
-//Menu overrides
-$menu-item-color: $Cyan
-$navbar-background-color: $Background
-// $menu-item-hover-color: $black !important
-// $menu-item-hover-background-color: $black
-// $menu-item-active-color: $kaldi-red-invert
-// $menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $Green	
-// $menu-label-color: $white-ter
+
 
 
 .menu-label

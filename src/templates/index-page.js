@@ -3,11 +3,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import HomeBanner from './banner.svg'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import Terminal from '../components/Terminal'
+import { useSpring, animated } from 'react-spring'
 
 // Format data, insert head img
 export const IndexPageTemplate = ({
@@ -18,13 +19,15 @@ export const IndexPageTemplate = ({
   introBody
 }) => {
   // <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn />
+  const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 
   return (
     <div>
       <div className="columns"  style={{
-              backgroundImage: `url('/img/ysmite.jpeg')`,
-/* Create the parallax scrolling effect */
+              /* Create the parallax scrolling effect */
+              backgroundImage: `url('/img/ysmite.jpg')`,
               backgroundAttachment: `fixed`,
+              backgroundSize: `cover`,
               backgroundPosition: `center top`,
               backgroundRepeat: `no-repeat`}}
             >
@@ -33,7 +36,6 @@ export const IndexPageTemplate = ({
             style={{
               background: `linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.75) 100%)`,
               width:`100%`,
-              /* Full height */
               height: `100%`,
               padding: `3rem`,
               flexDirection: `column`
@@ -58,11 +60,20 @@ export const IndexPageTemplate = ({
             <Terminal
               name={termTitle}
               strings={[
-                "`<strong>$ user@daylen.net ~ </strong>`Welcome to daylen.net! ^500\n" +
-                "`<strong>$ user@daylen.net ~ </strong>`I'm <strong>Daylen Nguyen</strong>^200 a <strong>photographer^200, web developer,</strong>^200\n" +
-                "`<strong>$ user@daylen.net ~ </strong>`and recent graduate from the <strong><a href='http://www.tacoma.uw.edu/'>University of Washington</a></strong>.\n"
+                "`<strong>$ user@daylen.net ~ </strong>`Welcome to daylen.net!^500\n" +
+                "`<strong>$ user@daylen.net ~ </strong>`I'm <strong>Daylen Nguyen.</strong>^500\n" +
+                "<strong>`$ user@daylen.net ~ `</strong>an avid <strong>web developer^250, photographer,</strong>^250\n" +
+                "<strong>`$ user@daylen.net ~ `</strong>and recent graduate from <strong><a href='http://www.tacoma.uw.edu/'>the University of Washington</a></strong>.^250\n"+
+                "<strong>`$ user@daylen.net ~ `</strong>npm run navigation"
               ]}
             />
+            <div>
+            <a href="https://google.com"class="button is-rounded is-medium">Photography</a>
+            <a href="https://google.com"class="button is-rounded is-medium">Programming</a>
+            <a href="https://google.com"class="button is-rounded is-medium">Blog</a>
+
+
+            </div>
           </div>
       </div>
       <section className="section">
