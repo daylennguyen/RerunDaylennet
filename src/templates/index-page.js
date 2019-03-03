@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
     <div>
       {/* <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn /> */}
       <div class="container is-centered" >
-        <img class="is-paddingless" src={HomeBanner}/>
+        <img src={HomeBanner}/>
       </div>
       <p>{termTitle}</p>
       <p>{termText}</p>
