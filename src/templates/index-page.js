@@ -8,7 +8,6 @@ import HomeBanner from './banner.svg'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import Terminal from '../components/Terminal'
-import { useSpring, animated } from 'react-spring'
 
 // Format data, insert head img
 export const IndexPageTemplate = ({
@@ -19,13 +18,12 @@ export const IndexPageTemplate = ({
   introBody
 }) => {
   // <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn />
-  const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 
   return (
     <div>
       <div className="columns"  style={{
               /* Create the parallax scrolling effect */
-              backgroundImage: `url('/img/ysmite.jpg')`,
+              backgroundImage: `url('/img/ysmite-min.jpg')`,
               backgroundAttachment: `fixed`,
               backgroundSize: `cover`,
               backgroundPosition: `center top`,
