@@ -26,11 +26,12 @@ collections:
         label: "Landing Page"
         name: "Index Page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Banner, name: banner, widget: image}
-          - {label: TerminalTitle, name: termtitle, widget: string}
-          - {label: TerminalText, name: termtext, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Body, name: body, widget: string}]}]}
+            - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+            - {label: Banner, name: banner, widget: image}
+            - {label: TerminalTitle, name: termtitle, widget: string}
+            - {label: TerminalText, name: termtext, widget: string}
+            - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+            - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Body, name: body, widget: string}]}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

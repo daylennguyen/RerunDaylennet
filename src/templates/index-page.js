@@ -21,25 +21,9 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <div className="columns"  style={{
-              /* Create the parallax scrolling effect */
-              backgroundImage: `url('/img/ysmite-min.jpg')`,
-              backgroundAttachment: `fixed`,
-              backgroundSize: `cover`,
-              backgroundPosition: `center top`,
-              backgroundRepeat: `no-repeat`}}
-            >
-          <div
-            className="flexAlgnJstfyCntr margin-top-0"
-            style={{
-              background: `linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.75) 100%)`,
-              width:`100%`,
-              height: `100%`,
-              padding: `3rem`,
-              flexDirection: `column`
-            }}
-          >
-            <Link to='/' className="flexAlgnJstfyCntr"
+      <div className="columns land-container">
+          <div className="flex-center land-wrapper margin-top-0">
+            <Link to='/' className="flex-center"
             style={{
                   padding: '0',
                   margin: '0',
@@ -66,15 +50,15 @@ export const IndexPageTemplate = ({
               ]}
             />
             <div>
-            <a href="https://google.com"class="button is-rounded is-medium">Photography</a>
-            <a href="https://google.com"class="button is-rounded is-medium">Programming</a>
-            <a href="https://google.com"class="button is-rounded is-medium">Blog</a>
+            <a href="https://google.com"className="button is-rounded is-medium">Photography</a>
+            <a href="https://google.com"className="button is-rounded is-medium">Programming</a>
+            <a href="https://google.com"className="button is-rounded is-medium">Blog</a>
 
 
             </div>
           </div>
       </div>
-      <section className="section">
+      <section className="content">
         <div className="container">
           <p>{termTitle}</p>
           <p>{termText}</p>
