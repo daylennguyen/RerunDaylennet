@@ -3,11 +3,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-// import Img from 'gatsby-image'
 import HomeBanner from './banner.svg'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import Terminal from '../components/Terminal'
+import {Button} from '../components/IconButton'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCodepen, faLinkedin, faFacebook, faDiscord, faGoogle, faTrello, faDribbbleSquare,faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Format data, insert head img
 export const IndexPageTemplate = ({
@@ -18,26 +21,22 @@ export const IndexPageTemplate = ({
   introBody
 }) => {
   // <Img fixed={banner.childImageSharp.fixed} title="daylen net banner" alt="intro banner for daylen web portfolio" fadeIn />
+  library.add(faLinkedin)
+  library.add(faFacebook)
+  library.add(faDiscord)
+  library.add(faGoogle)
+  library.add(faTrello)
+  library.add(faDribbbleSquare)
+  library.add(faTwitterSquare)
+  library.add(faCodepen)
+
 
   return (
     <div>
-      <div className="columns land-container">
+      <section className="columns land-container">
           <div className="flex-center land-wrapper margin-top-0">
-            <Link to='/' className="flex-center"
-            style={{
-                  padding: '0',
-                  margin: '0',
-                }}>
-              <img src={HomeBanner}
-                style={{
-                  backgroundColor: 'rgba(38, 38, 38, .6)',
-                  padding: '1rem',
-                  // margin: '2rem auto',
-                  marginBottom: `3rem`,
-                  width: '100%'
-                }}
-                alt="daylen.net website portfolio banner"
-              />
+            <Link to='/' className="flex-center is-paddingless is-marginless">
+              <img src={HomeBanner} className="banner" alt="daylen.net website portfolio banner"/>
             </Link>
             <Terminal
               name={termTitle}
@@ -49,15 +48,37 @@ export const IndexPageTemplate = ({
                 "<strong>`$ user@daylen.net ~ `</strong>npm run navigation"
               ]}
             />
-            <div>
-            <a href="https://google.com"className="button is-rounded is-medium">Photography</a>
-            <a href="https://google.com"className="button is-rounded is-medium">Programming</a>
-            <a href="https://google.com"className="button is-rounded is-medium">Blog</a>
-
-
+            <div className=" buttons is-grouped has-addons are-medium">
+              <Link to='/' className="button">Programming</Link>
+              <Link to='/' className="button">Blog</Link>
+              <Link to='/' className="button">Photography</Link>
+            </div>
+            <div className="social-nav buttons are-medium">
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faGoogle}/>
+              </Link>
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faLinkedin}/>
+              </Link>
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faFacebook}/>
+              </Link>
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faTwitterSquare}/>
+              </Link>
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faDribbbleSquare}/>
+              </Link>
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faTrello}/>
+              </Link>
+              <Link to='/'  className="button borderhover">
+                  <FontAwesomeIcon className="icon" icon={faCodepen}/>
+              </Link>
+              
             </div>
           </div>
-      </div>
+      </section>
       <section className="content">
         <div className="container">
           <p>{termTitle}</p>

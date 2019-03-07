@@ -30,14 +30,14 @@ const Navbar = class extends React.Component {
   render () {
     return (
       <nav
-        className='navbar is-dark'
+        className='navbar is-fixed-top'
         role='navigation'
         aria-label='main-navigation'
       >
         <div className='container'>
           <div className='navbar-brand'>
             <Link to='/' className='navbar-item' title='Logo'>
-              <img src={logo} alt='Kaldi' style={{ width: '88px' }} />
+              <img src={logo} alt='daylennet nav icon' style={{ width: '88px' }} />
             </Link>
             {/* Hamburger menu */}
             <div className='navbar-burger burger' data-target='navMenu'>
