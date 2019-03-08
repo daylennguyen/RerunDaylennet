@@ -30,7 +30,6 @@ export const IndexPageTemplate = ({
   library.add(faTwitterSquare)
   library.add(faCodepen)
 
-
   return (
     <div>
       <section className="columns land-container">
