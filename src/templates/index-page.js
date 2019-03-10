@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <section className="columns land-container">
+      {/* <section className="columns land-container"> */}
           <div className="flex-center land-wrapper margin-top-0">
             <Link to='/' className="flex-center is-paddingless is-marginless">
               <img src={HomeBanner} className="banner" alt="daylen.net website portfolio banner"/>
@@ -77,8 +77,8 @@ export const IndexPageTemplate = ({
               
             </div>
           </div>
-      </section>
-      <section className="content">
+      {/* </section> */}
+      <section className="content margin-content">
         <div className="container">
           <p>{termTitle}</p>
           <p>{termText}</p>

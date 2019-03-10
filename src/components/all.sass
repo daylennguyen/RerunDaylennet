@@ -70,6 +70,10 @@ $text-strong: $Cyan
     transition: $dur all ease
     -webkit-transition: $dur all ease
 
+=pushdown
+    &:hover
+        transform: translateY(5px)
+        box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 15px    
 
 @keyframes rollout
     0%
@@ -107,29 +111,19 @@ footer.footer
     background-color: rgba(40, 42, 54, .55)
     padding: 1rem
     margin-bottom: 3rem
-    width: 100
+    width: 50vw
     border: solid 1px rgba(66, 244, 182, 0)
-    +transition-all
+    margin-block-start: -30px
     &:hover
         border: solid 1px $Tqs
+    +transition-all
+    +pushdown
 
-
-
-
-/* landing header parallax effect */
-.land-container
-    background-image: url('/img/ysmite-min.jpg')
-    background-attachment: fixed
-    background-size: cover
-    background-position: center top
-    background-repeat: no-repeat
-    height: 875px
-    margin: 0 !important
 
 .land-wrapper
-    background:  linear-gradient(rgba(0, 0, 0, 0) 0px, $AltBg 100%)
+    background:  linear-gradient(rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0) 30%, $AltBg 100%)
     width: 100%
-    height:  100%
+    height:  99vh
     flex-direction: column
     &::before
         display: block
@@ -140,7 +134,7 @@ footer.footer
         position: relative
         background: linear-gradient($AltBg 0px, $AltBg 50%, rgba(0, 0, 0, 0) 100%)
         left: 0 
-        top: 875px 
+        top: 99vh 
         right: 0
 
 .button
@@ -154,7 +148,7 @@ footer.footer
 .flex-center
     display: flex
     align-items: center
-    justify-content: center
+    // justify-content: center
 
 
 // Helper Classes
@@ -212,6 +206,7 @@ footer.footer
     flex-flow: column
     justify-content: center
     left: 0
+    top: 20%
     & .borderhover
         opacity: .5
         +transition-all
@@ -240,7 +235,10 @@ footer.footer
         height: 1em
         vertical-align: middle
         display: inline
-        
+
+.margin-content
+    margin-top: 190px
+
 .content .taglist
     list-style: none
     margin-bottom: 0
@@ -264,22 +262,20 @@ footer.footer
     font-family: 'Ubuntu Mono'    
     color: $Foreground
     flex-direction: column    
-    font-size: 1.5rem
+    font-size: 1.5vw
+    
     letter-spacing: 1px    
     display: inline-flex    
     justify-content: left    
     font-weight: 700
     box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 25px    
     background-color: rgba(40, 42, 54, .7)    
-    height: 300px    
+    height: 315px    
     animation: rollout 1s ease-in 1
-    width: 60%
+    width: 57%
     margin-bottom: 25px
     +transition-all
-    &:hover
-        transform: translateY(5px)
-        box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 15px    
-
+    +pushdown
     & .term-titlebar
         position: -webkit-sticky
         position: sticky
