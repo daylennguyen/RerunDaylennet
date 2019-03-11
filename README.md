@@ -7,11 +7,10 @@
     />
   </a>
 </p>
-
 <p align="center">
-  <a href="https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys">
+  <a href="https://app.netlify.com/sites/xenodochial-shaw-0343de/deploys">
     <img
-      src="https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status"
+      src="https://api.netlify.com/api/v1/badges/f14927b2-9b31-4c3f-8d71-2f15e9dd8652/deploy-status"
       alt="Netlify Status"
     />
   </a>
