@@ -1,11 +1,15 @@
 ---
 templateKey: "index-page"
-title: "maintitle"
-banner: /img/ico/pika32.png
-termtitle: "DTerm: Welcome Prompt.sh"
-termtext: "Daylen's Terminal"
+path: /
 intro:
   heading: "main.intro.heading"
   body: main.intro.body
+terminal:
+  termtitle: "Terminal4Hoomans"
+  termInit: "Hi! I'm Daylen, "
+  replaceList:
+    - a proud UW Husky
+    - an avid Web Developer
+    - an avid Photographer
+    - a Chrohn's Disease Survivor
 ---
-

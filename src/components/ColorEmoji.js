@@ -6,6 +6,6 @@ import logo from '../img/logo.svg'
 const ColorEmoji = () => {
   const { size, children } = this.props
 
-  return <p class='color-emoji'>{children}</p>
+  return <p class="color-emoji">{children}</p>
 }
 export default Navbar

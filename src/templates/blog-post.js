@@ -33,7 +33,12 @@ export const BlogPostTemplate = ({
                 <div className="tags is-primary is-rounded are-medium">
                   {tags.map(tag => (
                     <span key={tag + `tag`}>
-                      <Link className="tag is-primary" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link
+                        className="tag is-primary"
+                        to={`/tags/${kebabCase(tag)}/`}
+                      >
+                        {tag}
+                      </Link>
                     </span>
                   ))}
                 </div>

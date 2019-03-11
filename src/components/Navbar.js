@@ -4,7 +4,7 @@ import github from '../img/github-icon.svg'
 import logo from '../img/bullbasaur.svg'
 
 const Navbar = class extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(
       document.querySelectorAll('.navbar-burger'),
@@ -27,52 +27,56 @@ const Navbar = class extends React.Component {
     }
   }
 
-  render () {
+  render() {
     return (
       <nav
-        className='navbar is-fixed-top'
-        role='navigation'
-        aria-label='main-navigation'
+        className="navbar is-fixed-top"
+        role="navigation"
+        aria-label="main-navigation"
       >
-        <div className='container'>
-          <div className='navbar-brand'>
-            <Link to='/' className='navbar-item' title='Logo'>
-              <img src={logo} alt='daylennet nav icon' style={{ width: '88px' }} />
+        <div className="container">
+          <div className="navbar-brand">
+            <Link to="/" className="navbar-item" title="Logo">
+              <img
+                src={logo}
+                alt="daylennet nav icon"
+                style={{ width: '88px' }}
+              />
             </Link>
             {/* Hamburger menu */}
-            <div className='navbar-burger burger' data-target='navMenu'>
+            <div className="navbar-burger burger" data-target="navMenu">
               <span />
               <span />
               <span />
             </div>
           </div>
-          <div id='navMenu' className='navbar-menu'>
-            <div className='navbar-start has-text-centered'>
-              <Link className='navbar-item' to='/about'>
+          <div id="navMenu" className="navbar-menu">
+            <div className="navbar-start has-text-centered">
+              <Link className="navbar-item" to="/about">
                 About
               </Link>
-              <Link className='navbar-item' to='/products'>
+              <Link className="navbar-item" to="/products">
                 Products
               </Link>
-              <Link className='navbar-item' to='/blog'>
+              <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
-              <Link className='navbar-item' to='/contact'>
+              <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
-              <Link className='navbar-item' to='/contact/examples'>
+              <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link>
             </div>
-            <div className='navbar-end has-text-centered'>
+            <div className="navbar-end has-text-centered">
               <a
-                className='navbar-item'
-                href='https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate'
-                target='_blank'
-                rel='noopener noreferrer'
+                className="navbar-item"
+                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className='icon'>
-                  <img src={github} alt='Github' />
+                <span className="icon">
+                  <img src={github} alt="Github" />
                 </span>
               </a>
             </div>

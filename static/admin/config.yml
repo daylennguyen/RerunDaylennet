@@ -37,12 +37,24 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Banner, name: banner, widget: image }
-          - { label: TerminalTitle, name: termtitle, widget: string }
-          - { label: TerminalText, name: termtext, widget: string }
           - {
-              label: Intro,
-              name: intro,
+              label: "Terminal",
+              name: terminal,
+              widget: object,
+              fields:
+                [
+                  { label: "InitialTxt", name: init, widget: string },
+                  {
+                    label: "ReplaceTxt",
+                    name: replace,
+                    widget: list,
+                    fields: [{ label: revise, name: revise, widget: string }],
+                  },
+                ],
+            }
+          - {
+              label: "Intro",
+              name: Intro,
               widget: object,
               fields:
                 [
