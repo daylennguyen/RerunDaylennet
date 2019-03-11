@@ -2,7 +2,6 @@
 templateKey: "index-page"
 path: /
 intro:
-  heading: "main.intro.heading"
   body: main.intro.body
 terminal:
   termtitle: "Terminal4Hoomans"
