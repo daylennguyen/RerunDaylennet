@@ -7,9 +7,14 @@
 		font-weight: 100
 		letter-spacing: 0.1em
 
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
 // Background Pattern //
 //    https://www.svgbackgrounds.com/license/
 $Background-Image: url("/img/bg-alt.svg")
+
+
+
 
 // Dracula theme //
 // https://github.com/dracula/dracula-theme
@@ -28,7 +33,7 @@ $Purple: #bd93f9
 $Red: #ff5555
 $Yellow: #f1fa8c
 $Tqs: rgb(66, 244, 182)
-$AltBg: rgb(40, 42, 54)
+$AltBg: rgba(40, 42, 54, 30)
 
 // Assignment //
 $primary: $Green
@@ -89,6 +94,33 @@ body
 	background-repeat: no-repeat
 	background-size: cover
 
+.has-addons a
+	+pushdown
+	+transition-all
+.avatar .eyes
+	background: url("/img/eyes_atlas.gif")
+	background-size: 960px 960px
+	background-position: 0px -192px
+.avatar .mouth
+	background: url("/img/mouth_atlas.gif")
+	background-size: 960px 960px
+	background-position: -768px -96px
+.avatar .color
+	background: url("/img/color_atlas.gif")
+	background-size: 960px 960px
+	background-position: -384px 0px
+
+.avatar-fit
+	& div
+		width: inherit
+		height: inherit
+		position: absolute
+	overflow: hidden
+	width: 90px
+	height: 90px
+	content: ""
+	image-rendering: pixelated
+	
 footer.footer
 	padding: 3rem 0rem 0rem
 	background-color: transparent
@@ -98,21 +130,24 @@ footer.footer
 
 .navbar
 	background: linear-gradient(to right, rgb(178, 180, 246) 0%, rgb(216, 190, 239) 50%, rgb(232, 195, 239) 100%)
+	box-sizing: content-box
 	& *
 		+transition-all
 	& .navbar-menu
-	box-shadow:none !important
+		box-shadow:none !important
 	& .navbar-item .icon
 		color: $primary
 	& .navbar-brand .navbar-item.logo
 		padding: 0 1rem
+	& .navbar-burger
+		height: auto
 
 .banner
 	background-color: rgba(40, 42, 54, .55)
 	padding: 1rem
+	margin-top: 10px
 	margin-bottom: 3rem
 	border: solid 1px rgba(66, 244, 182, 0)
-	margin-block-start: -50px
 	width: 927px
 	+touch
 		width: 80%
@@ -123,21 +158,20 @@ footer.footer
 
 
 .land-wrapper
-	background:  linear-gradient(rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0) 30%, $AltBg 100%)
 	width: 100%
 	height:  99vh
 	flex-direction: column
-	&::before
-		display: block
-		content: ""
-		width: inherit
-		height: 190px
-		z-index: 1
-		position: relative
-		background: linear-gradient($AltBg 0px, $AltBg 50%, rgba(0, 0, 0, 0) 100%)
-		left: 0
-		top: 99vh
-		right: 0
+	// &::before
+	// 	display: block
+	// 	content: ""
+	// 	width: inherit
+	// 	height: 190px
+	// 	z-index: 1
+	// 	position: relative
+	// 	background: linear-gradient($AltBg 0px, $AltBg 50%, rgba(0, 0, 0, 0) 100%)
+	// 	left: 0
+	// 	top: 99vh
+	// 	right: 0
 
 .button
 	+transition-all
@@ -205,9 +239,11 @@ footer.footer
 	z-index: 5
 	position: fixed
 	flex-flow: column
-	justify-content: center
+	align-items: center
+	justify-content: center !important
+	// height: 100%
+	top: 33.33%
 	left: 0
-	top: 20%
 	& .borderhover
 		opacity: .5
 		+transition-all
@@ -254,35 +290,40 @@ footer.footer
 		padding: 0 2rem 1rem 0
 		margin-bottom: 1.5rem
 		margin-top: 0
-
+.head
+	justify-content: center
+.head-cont
+	display: flex
+	flex-flow: column
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: 100%
 // landing-page terminal
 .termtext
+	margin: 2rem 0
 	border-radius: 10px
 	overflow-x: hidden
 	overflow-y: auto
-	font-family: 'Ubuntu Mono'
-	color: $Foreground
+	font-family: "Anonymice Nerd Font Complete"
+	color: $Green
 	flex-direction: column
 	font-size: 28.8px
 	+touch
 		font-size: 1.25rem
 		width: 90%
-
 	letter-spacing: 1px
 	display: flex
-	justify-content: left
 	font-weight: 700
 	box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 25px
-	background-color: rgba(40, 42, 54, .7)
-	height: 325px
+	background-color: rgba(179, 164, 250, .4)
 	animation: rollout 1s ease-in 1
-	width: 57%
-	margin-bottom: 25px
+	width: 40%
+	min-height: 321px
+	padding-bottom: 35px
 	+transition-all
 	+pushdown
 	& .term-titlebar
-		position: -webkit-sticky
-		position: sticky
 		top: 0
 		width: 100%
 		color: black
@@ -294,7 +335,14 @@ footer.footer
 		background-color: #f8f8f8
 		background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc)
 	.type-wrap
-		padding: 15px
+		// width: 50%
+		// padding: 15px
+		height: 43px
+		display: flex
+		justify-items: center
+		// flex-direction: column
+		align-items: center
+
 	& strong
 		color: $Tqs
 		& a

@@ -5,7 +5,7 @@ intro:
   body: main.intro.body
 terminal:
   termtitle: "Terminal4Hoomans"
-  termInit: "Hi! I'm Daylen, "
+  termInit: "> Hi! I'm Daylen,"
   replaceList:
     - a proud UW Husky
     - an avid Web Developer
