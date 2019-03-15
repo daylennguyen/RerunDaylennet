@@ -4,7 +4,7 @@ path: /
 intro:
   body: main.intro.body
 terminal:
-  termtitle: "Terminal4Hoomans"
+  termtitle: "Terminal 4 Hoomans"
   termInit: "> Hi! I'm Daylen,"
   replaceList:
     - a proud UW Husky

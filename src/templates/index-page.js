@@ -10,6 +10,8 @@ import Terminal from "../components/Terminal";
 import Avatar from "../components/Avatar";
 import { Social } from "./Social";
 import TermCollectionsNav from "./TermCollectionsNav";
+import { faHandPointDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /* <img src={`${HomeBanner}`} className="banner" alt="daylen.net website portfolio banner" /> */
 
@@ -33,15 +35,20 @@ export const IndexPageTemplate = ({
 					<TermCollectionsNav />
 				</Terminal>
 				<Social />
+				<a
+					onClick={() => {
+						document
+							.querySelector(".blogroll")
+							.scrollIntoView({ behavior: "smooth" });
+					}}
+					className="button borderhover bounce"
+				>
+					<FontAwesomeIcon className="icon" icon={faHandPointDown} />
+				</a>
 			</div>
 
-			<section className="content margin-content">
+			<section className="content">
 				<div className="container">
-					<h1>{termTitle}</h1>
-					<h1>{init}</h1>
-					<h1>{replaceList}</h1>
-					<h1>{introHeading}</h1>
-					<h1>{introBody}</h1>
 					<BlogRoll />
 				</div>
 			</section>

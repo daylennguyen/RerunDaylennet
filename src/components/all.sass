@@ -45,7 +45,7 @@ $button-color: $Tqs
 $button-border-color: $Tqs
 $button-hover-color: $Foreground
 $button-hover-border-color: $Foreground
-
+$background: rgba(68, 71, 90, .5)
 
 // Bulma Nav overrides //
 $navbar-height: 2rem
@@ -77,11 +77,22 @@ $text-strong: $Cyan
 		transform: translateY(5px)
 		box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 15px
 
+@keyframes bounce 
+	0%, 20%, 50%, 80%, 100% 
+		transform: translateY(0)
+	40% 
+		transform: translateY(-30px)
+	60% 
+		transform: translateY(-15px)
+ 
 @keyframes rollout
 	0%
 		opacity: 0
 	100%
 		opacity: 1
+.bounce
+	animation: bounce 2s infinite
+	margin-top: 2rem
 body
 	color: $Foreground
 	background-color: $Background
@@ -90,7 +101,12 @@ body
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
-
+.blogroll-item
+	+transition-all
+	border: solid 1px rgba(66, 244, 182, 0)
+	&:hover
+		background: rgba(68, 71, 90, 1)
+		border: solid 1px $Tqs
 .has-addons a
 	+pushdown
 	+transition-all
@@ -108,6 +124,7 @@ body
 	background-position: -384px 0px
 .me
 	margin-top: 50px
+	background: rgba(68, 71, 90, 1)
 	cursor: -webkit-grab
 	&:active
 		cursor: -webkit-grabbing
@@ -268,6 +285,9 @@ footer.footer
 			& .icon
 				color: rgba(178, 180, 246, 1)
 
+.borderhover
+
+
 .social
 	padding: 2em
 
@@ -281,8 +301,6 @@ footer.footer
 		vertical-align: middle
 		display: inline
 
-.margin-content
-	margin-top: 190px
 
 .content .taglist
 	list-style: none
