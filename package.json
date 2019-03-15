@@ -39,6 +39,7 @@
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-spring": "^8.0.9",
+    "react-with-gesture": "^4.0.6",
     "redux": "^3.7.2",
     "slate": "^0.33.8",
     "typed.js": "^2.0.10",

@@ -10218,6 +10218,11 @@ react-waypoint@^8.1.0:
     prop-types "^15.0.0"
     react-is "^16.6.3"
 
+react-with-gesture@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/react-with-gesture/-/react-with-gesture-4.0.6.tgz#d264cfc9076506471c3ea0d8789869f3b6af75c9"
+  integrity sha512-hThnKyqGpPhH95mxHtzCH5mz/JPArErAHGnDi21VHIgKhZaxqCT5KHuUnc13MRt8g1F7YTx1OrgP9gCYFdZOWg==
+
 react@^16.2.0, react@^16.6.3, react@^16.8.1:
   version "16.8.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.2.tgz#83064596feaa98d9c2857c4deae1848b542c9c0c"

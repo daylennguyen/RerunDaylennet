@@ -13,9 +13,6 @@
 //    https://www.svgbackgrounds.com/license/
 $Background-Image: url("/img/bg-alt.svg")
 
-
-
-
 // Dracula theme //
 // https://github.com/dracula/dracula-theme
 $Background: #282a36
@@ -109,17 +106,28 @@ body
 	background: url("/img/color_atlas.gif")
 	background-size: 960px 960px
 	background-position: -384px 0px
-
+.me
+	margin-top: 50px
+	cursor: -webkit-grab
+	&:active
+		cursor: -webkit-grabbing
+		& .color 
+			background-position: 0px 0px
+		& .mouth
+			background-position: -576px 0px
+	
 .avatar-fit
 	& div
 		width: inherit
 		height: inherit
 		position: absolute
+			
 	overflow: hidden
 	width: 90px
 	height: 90px
 	content: ""
 	image-rendering: pixelated
+
 	
 footer.footer
 	padding: 3rem 0rem 0rem
@@ -242,7 +250,7 @@ footer.footer
 	align-items: center
 	justify-content: center !important
 	// height: 100%
-	top: 33.33%
+	top: 35.5%
 	left: 0
 	& .borderhover
 		opacity: .5
@@ -308,6 +316,8 @@ footer.footer
 	font-family: "Anonymice Nerd Font Complete"
 	color: $Green
 	flex-direction: column
+	user-select: none
+
 	font-size: 28.8px
 	+touch
 		font-size: 1.25rem
@@ -316,7 +326,7 @@ footer.footer
 	display: flex
 	font-weight: 700
 	box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 25px
-	background-color: rgba(179, 164, 250, .4)
+	background-color: rgba(179, 164, 250, .5)
 	animation: rollout 1s ease-in 1
 	width: 40%
 	min-height: 321px
@@ -325,6 +335,8 @@ footer.footer
 	+pushdown
 	& .term-titlebar
 		top: 0
+		user-select: none
+		// cursor: -webkit-grab
 		width: 100%
 		color: black
 		text-align: center
