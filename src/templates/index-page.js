@@ -34,6 +34,7 @@ export const IndexPageTemplate = ({
 		<div>
 			<div className="flex-center land-wrapper head">
 				<Terminal
+					data-aos="fade"
 					name={termTitle}
 					banner={tBanner}
 					init={init}
@@ -55,10 +56,14 @@ export const IndexPageTemplate = ({
 			</div>
 
 			<section className="content">
-				<div className="container blogroll">
-					<h1 className="section-title">zzz</h1>
-					<BlogRoll />
-				</div>
+				<span className="">
+					<div className="container blogroll flex-center">
+						<h1 className="section-title" data-aos="fade">
+							Recent Blog Posts
+						</h1>
+						<BlogRoll />
+					</div>
+				</span>
 			</section>
 		</div>
 	);

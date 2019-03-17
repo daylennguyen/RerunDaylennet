@@ -13,12 +13,13 @@ class BlogRoll extends React.Component {
 				{posts &&
 					/* Only display 4 posts */
 					posts.slice(0, 4).map(({ node: post }) => {
-						console.log(i * 350);
+						console.log(i * 120);
 						return (
 							<div
 								className="is-parent column is-6"
 								data-aos="zoom-out"
-								data-aos-delay={`${i++ * 150}`}
+								data-aos-duration="600"
+								data-aos-delay={i++ * 150}
 								key={post.id}
 							>
 								<article className="tile is-child box notification blogroll-item">
