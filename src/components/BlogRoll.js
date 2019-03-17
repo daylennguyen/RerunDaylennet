@@ -12,7 +12,7 @@ class BlogRoll extends React.Component {
 			<div className="columns is-multiline">
 				{posts &&
 					/* Only display 4 posts */
-					posts.slice(0, 4).map(({ node: post }) => {
+					posts.slice(0, 2).map(({ node: post }) => {
 						console.log(i * 120);
 						return (
 							<div

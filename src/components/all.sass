@@ -84,23 +84,38 @@ $text-strong: $Cyan
 		transform: translateY(-30px)
 	60% 
 		transform: translateY(-15px)
- 
+
 .blogroll
-	margin-top: 100px !important
-	
+	background: rgba(139, 233, 253, .3)  
+	padding: 50px  
+	border: $Green 1px solid  
+	& .columns 
+		width: 100%
+		&:last-child
+			margin-bottom: 0 !important
+		& .column
+			
 .section-title
-	// margin-bottom: 200px
+	transition: all .5s !important
 	background-color: rgba($Green,.7)
 	color: $AltBg !important
 	text-align: center
 	display: inline
 	padding: 12px
+	&:hover
+		background-color: rgba($AltBg,.7)
+		color: $Green !important
 
-@keyframes rollout
-	0%
-		opacity: 0
-	100%
-		opacity: 1
+.blogroll-item
+	+transition-all
+	border: solid 1px rgba(66, 244, 182, 0)
+	height: 100%
+	&:hover
+		background: rgba(68, 71, 90, 1)
+		border: solid 1px $Tqs
+
+	
+
 body
 	overflow: hidden
 	max-width: 100vw
@@ -117,15 +132,10 @@ body
 	background-repeat: no-repeat
 	background-size: cover
 
-.blogroll-item
-	+transition-all
-	border: solid 1px rgba(66, 244, 182, 0)
-	&:hover
-		background: rgba(68, 71, 90, 1)
-		border: solid 1px $Tqs
 .has-addons a
 	+pushdown
 	+transition-all
+
 .avatar .eyes
 	background: url("/img/eyes_atlas.gif")
 	background-size: 960px 960px

@@ -35,6 +35,7 @@ collections:
           widget: "hidden",
           default: "project-post",
         }
+      - { label: Image, name: image, widget: image }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Github", name: "github", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
