@@ -14,7 +14,6 @@ export default class Terminal extends React.Component {
 			strings: replaceList,
 			typeSpeed: 15,
 			backSpeed: 15,
-			fadeOut: true,
 			showCursor: false,
 			loop: true,
 			smartBackspace: true
@@ -41,6 +40,7 @@ export default class Terminal extends React.Component {
 					{init}
 					<span className="type-wrap">
 						<span
+							className="type-wrap"
 							style={{
 								whiteSpace: "normal",
 								background: "#282a36",

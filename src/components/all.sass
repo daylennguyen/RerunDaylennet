@@ -85,6 +85,13 @@ $text-strong: $Cyan
 	60% 
 		transform: translateY(-15px)
  
+
+.section-title
+	background-color: $Cyan
+	color: $AltBg !important
+	text-align: center
+	display: inline
+
 @keyframes rollout
 	0%
 		opacity: 0
@@ -95,7 +102,8 @@ body
 	max-width: 100vw
 .bounce
 	animation: bounce 2s infinite
-	margin-top: 2rem
+	bottom: 5%
+	position: absolute !important
 body
 	color: $Foreground
 	background-color: $Background
@@ -104,6 +112,7 @@ body
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
+
 .blogroll-item
 	+transition-all
 	border: solid 1px rgba(66, 244, 182, 0)
@@ -165,7 +174,7 @@ footer.footer
 
 .navbar
 	max-width: 100vw
-	width: 100vw
+	width: 100%
 	overflow: hidden
 	background: linear-gradient(to right, rgb(178, 180, 246) 0%, rgb(216, 190, 239) 50%, rgb(232, 195, 239) 100%)
 	box-sizing: content-box
@@ -280,7 +289,6 @@ footer.footer
 	align-items: center
 	justify-content: center !important
 	// height: 100%
-	top: 35.5%
 	left: 0
 	& .borderhover
 		opacity: .5
@@ -378,6 +386,8 @@ footer.footer
 		background-color: #f8f8f8
 		background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc)
 	.type-wrap
+		min-height: 43px
+		content: ""
 		// width: 50%
 		// padding: 15px
 		height: 43px

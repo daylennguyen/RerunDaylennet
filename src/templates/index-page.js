@@ -1,6 +1,6 @@
 // Landing Page
-
-import React from "react";
+import AOS from "aos";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import HomeBanner from "./banner.svg";
@@ -22,6 +22,13 @@ export const IndexPageTemplate = ({
 	init,
 	replaceList
 }) => {
+	// waow~ react-hooks!
+	useEffect(() => {
+		if (AOS.refresh() === undefined) {
+			AOS.init();
+			console.log("aos initt'd");
+		}
+	}, []);
 	const tBanner = <Avatar />;
 	return (
 		<div>
@@ -48,7 +55,8 @@ export const IndexPageTemplate = ({
 			</div>
 
 			<section className="content">
-				<div className="container">
+				<div className="container blogroll">
+					<h1 className="section-title">zzz</h1>
 					<BlogRoll />
 				</div>
 			</section>
