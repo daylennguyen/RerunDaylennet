@@ -23,9 +23,9 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-  - name: "projects"
-    label: "Projects"
-    folder: "src/pages/projects"
+  - name: "project"
+    label: "Project"
+    folder: "src/pages/project"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
