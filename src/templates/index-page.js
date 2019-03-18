@@ -12,6 +12,7 @@ import { Social } from "./Social";
 import TermCollectionsNav from "./TermCollectionsNav";
 import { faHandPointDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ProjectsRoll from "../components/ProjectsRoll";
 
 /* <img src={`${HomeBanner}`} className="banner" alt="daylen.net website portfolio banner" /> */
 
@@ -29,39 +30,45 @@ export const IndexPageTemplate = ({
 			console.log("aos initt'd");
 		}
 	}, []);
-	const tBanner = <Avatar />;
+	const handleClick = () => {
+		document.querySelector(".blogroll").scrollIntoView({ behavior: "smooth" });
+	};
+
 	return (
 		<div>
 			<div className="flex-center land-wrapper head">
 				<Terminal
 					data-aos="fade"
 					name={termTitle}
-					banner={tBanner}
+					banner={<Avatar />}
 					init={init}
 					replaceList={replaceList}
 				>
 					<TermCollectionsNav />
 				</Terminal>
 				<Social />
-				<a
-					onClick={() => {
-						document
-							.querySelector(".blogroll")
-							.scrollIntoView({ behavior: "smooth" });
-					}}
-					className="button borderhover bounce"
-				>
+				<a onClick={handleClick} className="button borderhover bounce">
 					<FontAwesomeIcon className="icon" icon={faHandPointDown} />
 				</a>
 			</div>
 
 			<section className="content">
 				<span className="">
-					<div className="container blogroll flex-center">
+					<div className="container showcase flex-center">
 						<h1 className="section-title" data-aos="fade">
 							Recent Blog Posts
 						</h1>
 						<BlogRoll prntcount={2} />
+					</div>
+				</span>
+			</section>
+			<section className="content">
+				<span className="">
+					<div className="container showcase flex-center">
+						<h1 className="section-title" data-aos="fade">
+							Recent Projects
+						</h1>
+						<ProjectsRoll prntcount={2} />
 					</div>
 				</span>
 			</section>

@@ -11,11 +11,10 @@ class BlogRoll extends React.Component {
 		return (
 			<div className="columns is-multiline">
 				{posts &&
-					/* Only display 4 posts */
+					/* Only display 4 posts. bangbang usage! */
 					posts
-						.slice(0, prntcount ? prntcount : posts.length)
+						.slice(0, !!prntcount ? prntcount : posts.length)
 						.map(({ node: post }) => {
-							console.log(i * 120);
 							return (
 								<div
 									className="is-parent column is-6"
@@ -24,7 +23,7 @@ class BlogRoll extends React.Component {
 									data-aos-delay={i++ * 150}
 									key={post.id}
 								>
-									<article className="tile is-child box notification blogroll-item">
+									<article className="tile is-child box notification showcase-item">
 										<p>
 											<Link
 												className="title has-text-primary is-size-4"
@@ -62,33 +61,37 @@ BlogRoll.propTypes = {
 	})
 };
 
-export default props => (
-	<StaticQuery
-		query={graphql`
-			query BlogRollQuery {
-				allMarkdownRemark(
-					sort: { order: DESC, fields: [frontmatter___date] }
-					filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-				) {
-					edges {
-						node {
-							excerpt(pruneLength: 400)
-							id
-							fields {
-								slug
-							}
-							frontmatter {
-								title
-								templateKey
-								date(formatString: "MMMM DD, YYYY")
+// When asked for blogroll, query-data then stuff it into the components
+export default props => {
+	console.log(`props.prntcount=${props.prntcount}`);
+	return (
+		<StaticQuery
+			query={graphql`
+				query BlogRollQuery {
+					allMarkdownRemark(
+						sort: { order: DESC, fields: [frontmatter___date] }
+						filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+					) {
+						edges {
+							node {
+								excerpt(pruneLength: 400)
+								id
+								fields {
+									slug
+								}
+								frontmatter {
+									title
+									templateKey
+									date(formatString: "MMMM DD, YYYY")
+								}
 							}
 						}
 					}
 				}
-			}
-		`}
-		render={(data, count) => (
-			<BlogRoll data={data} count={count} prntcount={props.prntcount} />
-		)}
-	/>
-);
+			`}
+			render={(data, count) => (
+				<BlogRoll data={data} count={count} prntcount={props.prntcount} />
+			)}
+		/>
+	);
+};

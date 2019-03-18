@@ -4,9 +4,11 @@ import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Content, { HTMLContent } from "../components/Content";
 
 export const ProjectPostTemplate = ({
+	image,
 	content,
 	contentComponent,
 	description,
@@ -24,6 +26,7 @@ export const ProjectPostTemplate = ({
 					<div className="column is-10 is-offset-1">
 						<h1 className="title is-size-2 has-text-weight-bold is-bold-light">
 							{title}
+							<PreviewCompatibleImage imageInfo={image} />
 						</h1>
 						<p>{description}</p>
 						<PostContent content={content} />
@@ -52,6 +55,7 @@ export const ProjectPostTemplate = ({
 };
 
 ProjectPostTemplate.propTypes = {
+	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	content: PropTypes.node.isRequired,
 	contentComponent: PropTypes.func,
 	description: PropTypes.string,
@@ -65,6 +69,7 @@ const ProjectPost = ({ data }) => {
 	return (
 		<Layout>
 			<ProjectPostTemplate
+				image={post.frontmatter.image}
 				content={post.html}
 				contentComponent={HTMLContent}
 				description={post.frontmatter.description}
@@ -100,8 +105,16 @@ export const pageQuery = graphql`
 			frontmatter {
 				date(formatString: "MMMM DD, YYYY")
 				title
+				github
 				description
 				tags
+				image {
+					childImageSharp {
+						fluid(maxWidth: 540, quality: 100) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
 			}
 		}
 	}
