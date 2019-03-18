@@ -4,49 +4,51 @@ import { Link, graphql, StaticQuery } from "gatsby";
 
 class BlogRoll extends React.Component {
 	render() {
-		const { data } = this.props;
+		const { data, prntcount } = this.props;
 		const { edges: posts } = data.allMarkdownRemark;
-		console.log();
+		console.log(prntcount);
 		let i = 0;
 		return (
 			<div className="columns is-multiline">
 				{posts &&
 					/* Only display 4 posts */
-					posts.slice(0, 2).map(({ node: post }) => {
-						console.log(i * 120);
-						return (
-							<div
-								className="is-parent column is-6"
-								data-aos="zoom-out"
-								data-aos-duration="600"
-								data-aos-delay={i++ * 150}
-								key={post.id}
-							>
-								<article className="tile is-child box notification blogroll-item">
-									<p>
-										<Link
-											className="title has-text-primary is-size-4"
-											to={post.fields.slug}
-										>
-											{post.frontmatter.title}
-										</Link>
-										<span> &bull; </span>
-										<span className="subtitle is-size-5 is-block">
-											{post.frontmatter.date}
-										</span>
-									</p>
-									<p>
-										{post.excerpt}
-										<br />
-										<br />
-										<Link className="button" to={post.fields.slug}>
-											Keep Reading →
-										</Link>
-									</p>
-								</article>
-							</div>
-						);
-					})}
+					posts
+						.slice(0, prntcount ? prntcount : posts.length)
+						.map(({ node: post }) => {
+							console.log(i * 120);
+							return (
+								<div
+									className="is-parent column is-6"
+									data-aos="zoom-out"
+									data-aos-duration="600"
+									data-aos-delay={i++ * 150}
+									key={post.id}
+								>
+									<article className="tile is-child box notification blogroll-item">
+										<p>
+											<Link
+												className="title has-text-primary is-size-4"
+												to={post.fields.slug}
+											>
+												{post.frontmatter.title}
+											</Link>
+											<span> &bull; </span>
+											<span className="subtitle is-size-5 is-block">
+												{post.frontmatter.date}
+											</span>
+										</p>
+										<p>
+											{post.excerpt}
+											<br />
+											<br />
+											<Link className="button" to={post.fields.slug}>
+												Keep Reading →
+											</Link>
+										</p>
+									</article>
+								</div>
+							);
+						})}
 			</div>
 		);
 	}
@@ -60,7 +62,7 @@ BlogRoll.propTypes = {
 	})
 };
 
-export default () => (
+export default props => (
 	<StaticQuery
 		query={graphql`
 			query BlogRollQuery {
@@ -85,6 +87,8 @@ export default () => (
 				}
 			}
 		`}
-		render={(data, count) => <BlogRoll data={data} count={count} />}
+		render={(data, count) => (
+			<BlogRoll data={data} count={count} prntcount={props.prntcount} />
+		)}
 	/>
 );

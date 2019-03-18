@@ -61,7 +61,7 @@ export const IndexPageTemplate = ({
 						<h1 className="section-title" data-aos="fade">
 							Recent Blog Posts
 						</h1>
-						<BlogRoll />
+						<BlogRoll prntcount={2} />
 					</div>
 				</span>
 			</section>
