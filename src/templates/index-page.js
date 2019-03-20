@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
 		}
 	}, []);
 	const handleClick = () => {
-		document.querySelector(".blogroll").scrollIntoView({ behavior: "smooth" });
+		document.querySelector(".blog").scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
@@ -53,7 +53,7 @@ export const IndexPageTemplate = ({
 			</div>
 
 			<section className="content">
-				<span className="">
+				<span className="blog">
 					<div className="container showcase flex-center">
 						<h1 className="section-title" data-aos="fade">
 							Recent Blog Posts
@@ -63,7 +63,7 @@ export const IndexPageTemplate = ({
 				</span>
 			</section>
 			<section className="content">
-				<span className="">
+				<span className="proj">
 					<div className="container showcase flex-center">
 						<h1 className="section-title" data-aos="fade">
 							Recent Projects

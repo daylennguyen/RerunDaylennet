@@ -1,10 +1,10 @@
 ---
 templateKey: project-post
-image: /img/mouth_atlas.gif
+image: /img/og-image.jpg
 title: >-
   Put a bird on it post-ironic lumbersexual distillery subway tile tacos before
   they sold out
-github: 'https://hipsum.co/?paras=5&type=hipster-centric'
+github: "https://hipsum.co/?paras=5&type=hipster-centric"
 date: 2019-03-18T18:25:16.117Z
 description: >-
   Coloring book semiotics offal tbh craft beer microdosing, drinking vinegar pug
@@ -24,6 +24,7 @@ tags:
     Oh. You need a little dummy text for your mockup? How quaint.  I bet you’re
     still using Bootstrap too…
 ---
+
 ![](/img/eyes_atlas.gif)
 
 Forage biodiesel ugh brunch. Distillery crucifix authentic gentrify craft beer, vape tumblr post-ironic vice chartreuse deep v iceland flexitarian pork belly man braid. Pug mlkshk letterpress literally +1 forage plaid blog YOLO gastropub. Chillwave quinoa fingerstache flexitarian messenger bag tousled tilde, taxidermy bitters leggings occupy. Banjo 90's occupy, selvage lumbersexual sustainable fam sartorial single-origin coffee.

@@ -20,19 +20,21 @@ class ProjectsRoll extends React.Component {
 							console.log(i * 120);
 							return (
 								<div
-									className="media tile is-ancestor column is-6"
+									className="is-ancestor column is-6"
 									data-aos="zoom-out"
 									data-aos-duration="600"
 									data-aos-delay={i++ * 150}
 									key={post.id}
 								>
 									<article className="tile is-parent box notification showcase-item">
-										<div className="projroll-img is-child flex-center">
-											<Img
-												fixed={post.frontmatter.image.childImageSharp.fixed}
-											/>
-										</div>
-										<div className="is-child">
+										{!!post.frontmatter.image ? (
+											<div className="projroll-img is-child flex-center justify-center">
+												<Img
+													fixed={post.frontmatter.image.childImageSharp.fixed}
+												/>
+											</div>
+										) : null}
+										<div className="is-child justify-center flex-center">
 											<p>
 												<Link
 													className="title has-text-primary is-size-4"

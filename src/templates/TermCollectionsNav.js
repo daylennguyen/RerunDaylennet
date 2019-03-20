@@ -10,7 +10,7 @@ export default () => (
 		className="buttons is-grouped has-addons are-medium"
 		style={{ margin: "10px" }}
 	>
-		<BtnsWithTxt to="/blog" className="button" txt="Programming" />
+		<BtnsWithTxt to="/projects" className="button" txt="Programming" />
 		<BtnsWithTxt to="/blog" className="button" txt="Blog" />
 		<BtnsWithTxt to="/blog" className="button" txt="Photography" />
 	</div>
