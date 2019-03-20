@@ -37,6 +37,11 @@ export const IndexPageTemplate = ({
 	return (
 		<div>
 			<div className="flex-center land-wrapper head">
+				<img
+					src={HomeBanner}
+					className="banner"
+					alt="daylen nguyen .net a website for daylen's web-portfolio"
+				/>
 				<Terminal
 					data-aos="fade"
 					name={termTitle}
