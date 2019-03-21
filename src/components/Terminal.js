@@ -34,7 +34,7 @@ export default class Terminal extends React.Component {
 			<span className="termtext flex-center">
 				<div className="term-titlebar">{title}</div>
 				<span className="head-cont">
-					<div className="flex-center is-paddingless is-marginless">
+					<div className="flex-center">
 						{banner}
 					</div>
 					{init}
