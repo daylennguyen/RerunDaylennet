@@ -7,7 +7,7 @@
 		font-weight: 100
 		letter-spacing: 0.1em
 
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Oxygen')
 
 // Background Pattern //
 //    https://www.svgbackgrounds.com/license/
@@ -77,6 +77,9 @@ $text-strong: $Cyan
 		transform: translateY(5px)
 		box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 15px
 
+                
+
+
 @keyframes bounce 
 	0%, 20%, 50%, 80%, 100% 
 		transform: translateY(0)
@@ -84,6 +87,57 @@ $text-strong: $Cyan
 		transform: translateY(-30px)
 	60% 
 		transform: translateY(-15px)
+
+	
+@keyframes octocat-wave 
+	0%,to 
+		transform: rotate(0)
+                
+
+	20%,60% 
+		transform: rotate(-25deg)
+                
+
+	40%,80% 
+		transform: rotate(10deg)
+
+.GithubCorner 
+	position: fixed
+	top: 0
+	right: 0
+	z-index: 2
+	& *
+		text-decoration: none
+
+.GithubCorner svg 
+	color: #fff
+	border: 0
+	max-width: 6rem
+	max-height: 6rem
+
+.GithubCorner .octo-arm 
+	-webkit-transform-origin: 130px 106px
+	transform-origin: 130px 106px
+
+.GithubCorner:hover .octo-arm 
+	-webkit-animation: octocat-wave .56s ease-in-out
+	animation: octocat-wave .56s ease-in-out
+
+@media (max-width: 600px) 
+	.GithubCorner 
+		position:absolute
+		top: 6rem
+		z-index: 1
+
+	.GithubCorner:hover .octo-arm 
+		-webkit-animation: none
+		animation: none
+
+	.GithubCorner .octo-arm 
+		-webkit-animation: octocat-wave .56s ease-in-out
+		animation: octocat-wave .56s ease-in-out
+	
+            	
 // aka roll ('blog-roll', 'project-roll')
 .showcase
 	background: rgba(139, 233, 253, .3)  
