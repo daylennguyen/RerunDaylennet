@@ -1,14 +1,19 @@
 backend:
   name: git-gateway
   branch: master
-
+display_url: https://daylen.net
+site_url: https://daylen.net
+logo_url: https://daylen.net/img/logo.svg
+public_folder: /img
 media_library:
   name: uploadcare
   config:
     publicKey: a3292aec24a411d2e2cf
-
-public_folder: /img
-
+    effects: "crop,rotate,enhance,sharp,blur,grayscale"
+    imageShrink: "2000x2000"
+    previewStep: true
+    clearable: true
+    multiple: true
 collections:
   - name: "blog"
     label: "Blog"
