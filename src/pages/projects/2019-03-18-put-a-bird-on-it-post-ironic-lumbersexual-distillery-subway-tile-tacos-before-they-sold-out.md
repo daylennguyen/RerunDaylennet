@@ -1,10 +1,10 @@
 ---
 templateKey: project-post
-image: /img/og-image.jpg
+featimage: 'https://ucarecdn.com/d081ddc8-e568-4a86-81c8-3c98c84b2ddb~1/nth/0/'
 title: >-
   Put a bird on it post-ironic lumbersexual distillery subway tile tacos before
   they sold out
-github: "https://hipsum.co/?paras=5&type=hipster-centric"
+github: 'https://hipsum.co/?paras=5&type=hipster-centric'
 date: 2019-03-18T18:25:16.117Z
 description: >-
   Coloring book semiotics offal tbh craft beer microdosing, drinking vinegar pug

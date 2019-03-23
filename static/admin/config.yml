@@ -13,7 +13,7 @@ media_library:
     imageShrink: "2000x2000"
     previewStep: true
     clearable: true
-    multiple: true
+    multiple: false
 collections:
   - name: "blog"
     label: "Blog"
@@ -44,7 +44,7 @@ collections:
           widget: "hidden",
           default: "project-post",
         }
-      - { label: Image, name: image, widget: image }
+      - { label: Image, name: featimage, widget: image, required: false }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Github", name: "github", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
