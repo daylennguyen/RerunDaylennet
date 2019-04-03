@@ -32,7 +32,7 @@ class ProjectsRoll extends React.Component {
                       style={{
                         backgroundImage: `url(${post.frontmatter.featimage})`,
                         backgroundPosition: 'center',
-                        backgroundSize: 'cover'
+                        backgroundSize: 'cover',
                       }}
                     />
                   ) : null}
@@ -69,9 +69,9 @@ class ProjectsRoll extends React.Component {
 ProjectsRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 }
 
 // When asked for blogroll, query-data then stuff it into the components

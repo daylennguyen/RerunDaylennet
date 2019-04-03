@@ -10,6 +10,6 @@ export default () => (
   >
     <BtnsWithTxt to="/projects" className="button" txt="Programming" />
     <BtnsWithTxt to="/blog" className="button" txt="Blog" />
-    <BtnsWithTxt to="/blog" className="button" txt="Photography" />
+    <BtnsWithTxt to="/photos" className="button" txt="Photography" />
   </div>
 )

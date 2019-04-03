@@ -7,7 +7,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const ProjectPostTemplate = ({
+export const PhotoPostTemplate = ({
   image,
   content,
   contentComponent,
@@ -53,7 +53,7 @@ export const ProjectPostTemplate = ({
   )
 }
 
-ProjectPostTemplate.propTypes = {
+PhotoPostTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   content: PropTypes.node,
   contentComponent: PropTypes.func,
@@ -62,18 +62,18 @@ ProjectPostTemplate.propTypes = {
   helmet: PropTypes.object
 }
 
-const ProjectPost = ({ data }) => {
+const PhotoPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <ProjectPostTemplate
+      <PhotoPostTemplate
         image={post.frontmatter.image}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate='%s | Project'>
+          <Helmet titleTemplate='%s | Photo'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name='description'
@@ -88,32 +88,24 @@ const ProjectPost = ({ data }) => {
   )
 }
 
-ProjectPost.propTypes = {
+PhotoPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object
   })
 }
 
-export default ProjectPost
+export default PhotoPost
 
 export const pageQuery = graphql`
-  query ProjectPostByID($id: String!) {
+  query PhotoPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        github
-        description
         tags
-        image {
-          childImageSharp {
-            fluid(maxWidth: 540, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        fotoimage 
       }
     }
   }

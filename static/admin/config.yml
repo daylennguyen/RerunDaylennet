@@ -10,11 +10,27 @@ media_library:
   config:
     publicKey: a3292aec24a411d2e2cf
     effects: "crop,rotate,enhance,sharp,blur,grayscale"
-    imageShrink: "2000x2000"
-    previewStep: true
+    imageShrink: "1000x1000"
+    previewStep: false
     clearable: true
     multiple: false
 collections:
+  - name: "photograph"
+    label: "Photograph"
+    folder: "src/pages/photos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "photo-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "PhotoImage", name: "fotoimage", widget: image, required: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list" }
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"

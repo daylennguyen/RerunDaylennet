@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
   introBody,
   termTitle,
   init,
-  replaceList
+  replaceList,
 }) => {
   // waow~ react-hooks!
   useEffect(() => {
@@ -77,6 +77,16 @@ export const IndexPageTemplate = ({
           </div>
         </span>
       </section>
+      <section className="content">
+        <span className="proj">
+          <div className="container showcase flex-center">
+            <h1 className="section-title" data-aos="fade">
+              Recent Photos
+            </h1>
+            <ProjectsRoll prntcount={3} />
+          </div>
+        </span>
+      </section>
     </div>
   )
 }
@@ -89,7 +99,7 @@ IndexPageTemplate.propTypes = {
   introHeading: PropTypes.string,
   introBody: PropTypes.string,
   init: PropTypes.string,
-  replaceList: PropTypes.array
+  replaceList: PropTypes.array,
 }
 
 // Retrieve GQL data, insert into layout_component
@@ -112,9 +122,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default IndexPage
