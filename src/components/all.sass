@@ -256,10 +256,10 @@ body
 
 .projroll-item
 	background-color: rgba(68, 71, 90, 0.5)
-	border-radius: 6px;
-	box-shadow: 0 2px 3px rgba(40, 40, 40, 0.1), 0 0 0 1px rgba(40, 40, 40, 0.1);
-	color: #f8f8f2;
-	display: block;
+	border-radius: 6px
+	box-shadow: 0 2px 3px rgba(40, 40, 40, 0.1), 0 0 0 1px rgba(40, 40, 40, 0.1)
+	color: #f8f8f2
+	display: block
 	+transition-all
 
 
@@ -278,8 +278,8 @@ body
 			display: block
 	@supports (display: grid)
 		display: grid
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 4rem;
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 4rem
 		+touch
 			display: block
 			grid-template-columns: 1
@@ -352,6 +352,11 @@ footer.footer
 	.projroll-txt
 		align-items: flex-start
 		padding: 2rem
+	& .fotoroll-txt
+		display: flex
+		padding: 2rem
+		width: 100%
+		
 
 // Helper Classes
 .full-width-image-container

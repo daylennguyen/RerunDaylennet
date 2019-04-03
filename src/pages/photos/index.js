@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import ProjectsRoll from '../../components/ProjectsRoll'
+import PhotoRoll from '../../components/PhotoRoll'
 
 export default class PhotosIndexPage extends React.Component {
   render() {
@@ -28,7 +28,7 @@ export default class PhotosIndexPage extends React.Component {
                 </h1>
               </div>
             </div>
-            <ProjectsRoll />
+            <PhotoRoll />
           </div>
         </section>
       </Layout>
