@@ -264,13 +264,14 @@ body
 
 
 .projroll-sect 
+	width: 100%
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
 	align-items: stretch
 	& > *
 		width: auto
-		margin-bottom: 4rem
+		margin-bottom: 0rem
 		+touch
 			width: 100%
 			max-width: 50rem
@@ -475,13 +476,11 @@ footer.footer
 .termtext
 	margin: 2rem 0
 	border-radius: 10px
-	overflow-x: hidden
-	overflow-y: auto
+	overflow: visible
 	font-family: "Anonymice Nerd Font Complete"
 	color: $Green
 	flex-direction: column
 	user-select: none
-
 	font-size: 1.3rem
 	+touch
 		font-size: 1.25rem
@@ -499,6 +498,7 @@ footer.footer
 	+pullup
 	& .term-titlebar
 		top: 0
+		border-radius: 10px 10px 0px 0px
 		user-select: none
 		// cursor: -webkit-grab
 		width: 100%

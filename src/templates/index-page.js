@@ -1,20 +1,24 @@
 // Landing Page
-import AOS from 'aos'
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import HomeBanner from './banner.svg'
-import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
-import Terminal from '../components/Terminal'
-import Avatar from '../components/Avatar'
-import { Social } from './Social'
-import TermCollectionsNav from './TermCollectionsNav'
-import { faHandPointDown } from '@fortawesome/free-solid-svg-icons'
+import { graphql } from 'gatsby'
+// Animate on Scroll
+import AOS from 'aos'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandPointDown } from '@fortawesome/free-solid-svg-icons'
+import HomeBanner from './banner.svg'
+// HTML Head
+import Layout from '../components/Layout'
+// Side Nav
+import { Social } from './Social'
+import Avatar from '../components/Avatar'
+// Btns "Photography Programming Blog"
+import TermCollectionsNav from './TermCollectionsNav'
+import Terminal from '../components/Terminal'
+// Showcase Components
+import BlogRoll from '../components/BlogRoll'
 import ProjectsRoll from '../components/ProjectsRoll'
-
-/* <img src={`${HomeBanner}`} className="banner" alt="daylen.net website portfolio banner" /> */
+import PhotoRoll from '../components/PhotoRoll'
 
 export const IndexPageTemplate = ({
   introHeading,
@@ -78,12 +82,12 @@ export const IndexPageTemplate = ({
         </span>
       </section>
       <section className="content">
-        <span className="proj">
+        <span className="blog">
           <div className="container showcase flex-center">
             <h1 className="section-title" data-aos="fade">
               Recent Photos
             </h1>
-            <ProjectsRoll prntcount={3} />
+            <PhotoRoll prntcount={2} />
           </div>
         </span>
       </section>

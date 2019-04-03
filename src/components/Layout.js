@@ -55,12 +55,11 @@ const TemplateWrapper = ({ children }) => (
           {/* Google Analytics */}
           <script>
             {`
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-
-				gtag('config', 'UA-77762517-3');
-			`}
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-77762517-3');
+          `}
           </script>
           {/* Animate on scroll stylesheet */}
           <link
