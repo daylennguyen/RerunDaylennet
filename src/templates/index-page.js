@@ -1,7 +1,7 @@
 // Landing Page
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 // Animate on Scroll
 import AOS from 'aos'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
   introBody,
   termTitle,
   init,
-  replaceList,
+  replaceList
 }) => {
   // waow~ react-hooks!
   useEffect(() => {
@@ -40,14 +40,14 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <div className="flex-center land-wrapper head">
+      <div className='flex-center land-wrapper head'>
         <img
           src={HomeBanner}
-          className="banner"
+          className='banner'
           alt="daylen nguyen .net a website for daylen's web-portfolio"
         />
         <Terminal
-          data-aos="fade"
+          data-aos='fade'
           name={termTitle}
           banner={<Avatar />}
           init={init}
@@ -56,38 +56,37 @@ export const IndexPageTemplate = ({
           <TermCollectionsNav />
         </Terminal>
         <Social />
-        <a onClick={handleClick} className="button borderhover bounce">
-          <FontAwesomeIcon className="icon" icon={faHandPointDown} />
+        <a onClick={handleClick} className='button borderhover bounce'>
+          <FontAwesomeIcon className='icon' icon={faHandPointDown} />
         </a>
       </div>
-
-      <section className="content">
-        <span className="blog">
-          <div className="container showcase flex-center">
-            <h1 className="section-title" data-aos="fade">
-              Recent Blog Posts
+      <section className='content'>
+        <span className='blog'>
+          <div className='container showcase flex-center'>
+            <h1 className='section-title' data-aos='fade'>
+              <Link to='/blog'>Recent Blog Posts</Link>
             </h1>
             <BlogRoll prntcount={2} />
           </div>
         </span>
       </section>
-      <section className="content">
-        <span className="proj">
-          <div className="container showcase flex-center">
-            <h1 className="section-title" data-aos="fade">
-              Recent Projects
+      <section className='content'>
+        <span className='proj'>
+          <div className='container showcase flex-center'>
+            <h1 className='section-title' data-aos='fade'>
+              <Link to='/projects'>Recent Projects</Link>
             </h1>
             <ProjectsRoll prntcount={3} />
           </div>
         </span>
       </section>
-      <section className="content">
-        <span className="blog">
-          <div className="container showcase flex-center">
-            <h1 className="section-title" data-aos="fade">
-              Recent Photos
+      <section className='content'>
+        <span className='blog'>
+          <div className='container showcase flex-center'>
+            <h1 className='section-title' data-aos='fade'>
+              <Link to='/photos'>Recent Photos</Link>
             </h1>
-            <PhotoRoll prntcount={2} />
+            <PhotoRoll prntcount={3} />
           </div>
         </span>
       </section>
@@ -103,7 +102,7 @@ IndexPageTemplate.propTypes = {
   introHeading: PropTypes.string,
   introBody: PropTypes.string,
   init: PropTypes.string,
-  replaceList: PropTypes.array,
+  replaceList: PropTypes.array
 }
 
 // Retrieve GQL data, insert into layout_component
@@ -126,9 +125,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+      frontmatter: PropTypes.object
+    })
+  })
 }
 
 export default IndexPage

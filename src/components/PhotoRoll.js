@@ -34,8 +34,11 @@ class PhotoRoll extends React.Component {
                       style={{
                         backgroundImage: `url(${post.frontmatter.fotoimage}/-/progressive/yes/-/resize/800x/)`,
                         backgroundPosition: 'center',
-                        backgroundSize: 'cover'
+                        backgroundSize: 'cover',
                       }}
+                      role="img" 
+                      aria-label={`${post.frontmatter.title}`}
+                      title={`${post.frontmatter.title}`}
                     />
                   ) : null}
                   <div className='fotoroll-txt flex-center is-size-7'>

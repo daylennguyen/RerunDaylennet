@@ -199,16 +199,22 @@ body
 			-webkit-animation: octocat-wave .56s ease-in-out
 			animation: octocat-wave .56s ease-in-out
 	
-.section-title
-	transition: all .5s !important
-	background-color: rgba($Green,.7)
-	color: $AltBg !important
-	text-align: center
-	display: inline
-	padding: 12px
-	&:hover
-		background-color: rgba($AltBg,.7)
-		color: $Green !important
+.section-title 
+	margin-bottom: 2.5rem !important
+	& a
+		transition: all .5s !important
+		background-color: rgba($Green,.7)
+		color: $AltBg !important
+		text-align: center
+		display: inline
+		padding: 12px
+		text-decoration: none
+
+		&:hover
+			background-color: rgba($AltBg,.7)
+			color: $Green !important
+			text-decoration: none
+		
 
 .showcase-item
 	+transition-all
@@ -355,7 +361,7 @@ footer.footer
 		padding: 2rem
 	& .fotoroll-txt
 		display: flex
-		padding: 2rem
+		padding: .5rem
 		width: 100%
 		
 
