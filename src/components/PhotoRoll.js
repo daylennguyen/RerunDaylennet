@@ -32,7 +32,7 @@ class PhotoRoll extends React.Component {
                     <div
                       className='projroll-img'
                       style={{
-                        backgroundImage: `url(${post.frontmatter.fotoimage})`,
+                        backgroundImage: `url(${post.frontmatter.fotoimage}/-/progressive/yes/-/resize/800x/)`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover'
                       }}

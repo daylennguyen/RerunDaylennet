@@ -30,7 +30,7 @@ class ProjectsRoll extends React.Component {
                     <div
                       className="projroll-img"
                       style={{
-                        backgroundImage: `url(${post.frontmatter.featimage})`,
+                        backgroundImage: `url(${post.frontmatter.featimage}/-/progressive/yes/-/resize/800x/)`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                       }}
