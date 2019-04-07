@@ -28,9 +28,16 @@ export const PhotoPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <div className='img-wrapper flex-center'>
+              {image ? (
+                <img
+                  className='projroll-img '
+                  src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
+                />
+              ) : null}
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div className='pic-tag-wrapper' style={{ marginTop: `4rem` }}>
                 <h2>Tags</h2>
                 <div className='tags is-primary is-rounded are-medium'>
                   {tags.map((tag) => (
@@ -38,7 +45,7 @@ export const PhotoPostTemplate = ({
                       <Link
                         className='tag is-primary'
                         to={`/tags/${kebabCase(tag)}/`}
-                      >
+                        >
                         {tag}
                       </Link>
                     </span>
@@ -46,6 +53,7 @@ export const PhotoPostTemplate = ({
                 </div>
               </div>
             ) : null}
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +76,7 @@ const PhotoPost = ({ data }) => {
   return (
     <Layout>
       <PhotoPostTemplate
-        image={post.frontmatter.image}
+        image={post.frontmatter.fotoimage}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -105,7 +113,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
-        fotoimage 
+        fotoimage
       }
     }
   }

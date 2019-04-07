@@ -7,6 +7,10 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+// 10am Same place
+// Kyle Simmons
+//
+
 export const ProjectPostTemplate = ({
   image,
   content,
@@ -17,16 +21,39 @@ export const ProjectPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content
+  console.log(image)
+  // function myFunction (x) {
+  //   if (x.matches) {
+  //     // If media query matches
+  //     document.body.style.backgroundColor = 'yellow'
 
+  //   } else {
+  //     document.body.style.backgroundColor = 'pink'
+  //   }
+  // }
+
+  // var x = window.matchMedia('(max-width: 700px)')
+  // myFunction(x) // Call listener function at run time
+  // x.addListener(myFunction) // Attach listener function on state changes
+console.log(image)
   return (
     <section className='section'>
       {helmet || ''}
-      <div className='container content'>
+      <div className='container content '>
         <div className='columns'>
-          <div className='column is-10 is-offset-1'>
+          <div className='column is-10 is-offset-1 bg-dark-content'>
             <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>
+            <div className='img-wrapper flex-center'>
+              {image ? (
+                <img
+                  className='projroll-img '
+                  src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
+                />
+              ) : null}
+            </div>
+            <span className="post-txt-wrapper">
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -34,18 +61,14 @@ export const ProjectPostTemplate = ({
                 <h2>Tags</h2>
                 <div className='tags is-primary is-rounded are-medium'>
                   {tags.map((tag) => (
-                    <span key={`${tag}tag`}>
-                      <Link
-                        className='tag is-primary'
-                        to={`/tags/${kebabCase(tag)}/`}
-                      >
-                        {tag}
-                      </Link>
+                    <span className='tag is-primary' key={`${tag}tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </span>
                   ))}
                 </div>
               </div>
             ) : null}
+            </span>
           </div>
         </div>
       </div>
@@ -68,7 +91,7 @@ const ProjectPost = ({ data }) => {
   return (
     <Layout>
       <ProjectPostTemplate
-        image={post.frontmatter.image}
+        image={post.frontmatter.featimage}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -107,13 +130,7 @@ export const pageQuery = graphql`
         github
         description
         tags
-        image {
-          childImageSharp {
-            fluid(maxWidth: 540, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        featimage
       }
     }
   }
