@@ -121,6 +121,8 @@ body
 	color: $Foreground
 	+bg
 
+.tile.is-child
+	min-height: 100%
 .has-addons a
 	+pushdown
 	+transition-all
@@ -356,16 +358,17 @@ footer.footer
 
 .img-wrapper
 	width: 100%
-	background: rgba(0, 0, 0, 0.75)
+	background: rgba(0, 0, 0, 0.2)
 	padding: 50px
-	border: #50fa7b 1px solid
+	// border: #50fa7b 1px solid
 	margin-bottom: 2rem
 	& img
-		border: #50fa7b 1px solid
+		// border: #50fa7b 1px solid
 	& .projroll-img
-		max-width: 50%
+		max-width: 100%
+		width: 100%
 	& .pic-tag-wrapper
-		width: 50%
+		width: 90%
 
 .bg-dark-content
 	background: rgba(black, 0.75)
@@ -380,7 +383,7 @@ footer.footer
 	& .fotoroll-txt
 		display: flex
 		padding: .5rem
-		width: 100%
+		// width: 100%
 
 .projroll-txt
 	align-items: flex-start
@@ -451,6 +454,8 @@ footer.footer
 		margin: 0 !important
 		& .icon
 			color: $Tqs
+			& .inlink
+				color: $Yellow
 		&:hover
 			box-shadow: rgba(0, 0, 0, 0.2) 3.5px 12px 15px
 			transform: translateX(5px)
@@ -458,9 +463,6 @@ footer.footer
 			border-color: rgba(178, 180, 246, 1)
 			& .icon
 				color: rgba(178, 180, 246, 1)
-
-.borderhover
-
 
 .social
 	padding: 2em

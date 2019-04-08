@@ -35,7 +35,7 @@ export const ProjectPostTemplate = ({
   // var x = window.matchMedia('(max-width: 700px)')
   // myFunction(x) // Call listener function at run time
   // x.addListener(myFunction) // Attach listener function on state changes
-console.log(image)
+
   return (
     <section className='section'>
       {helmet || ''}
@@ -47,10 +47,12 @@ console.log(image)
             </h1>
             <div className='img-wrapper flex-center'>
               {image ? (
-                <img
-                  className='projroll-img '
-                  src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
-                />
+                <a href={image}>
+                  <img
+                    className='projroll-img '
+                    src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
+                  />
+                </a>
               ) : null}
             </div>
             <span className="post-txt-wrapper">

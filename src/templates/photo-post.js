@@ -14,7 +14,8 @@ export const PhotoPostTemplate = ({
   description,
   tags,
   title,
-  helmet
+  helmet,
+  date
 }) => {
   const PostContent = contentComponent || Content
 
@@ -27,14 +28,16 @@ export const PhotoPostTemplate = ({
             <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>
-            <p>{description}</p>
             <div className='img-wrapper flex-center'>
               {image ? (
+                <a href={image}>
                 <img
-                  className='projroll-img '
-                  src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
+                className='projroll-img '
+                src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
                 />
-              ) : null}
+                </a>
+                ) : null}
+            <em className="has-text-primary fotoroll-txt"><p>{date}{description ? ` – ${description}` : null}</p></em>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div className='pic-tag-wrapper' style={{ marginTop: `4rem` }}>
@@ -80,6 +83,7 @@ const PhotoPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        date={post.frontmatter.date}
         helmet={
           <Helmet titleTemplate='%s | Photo'>
             <title>{`${post.frontmatter.title}`}</title>
@@ -114,6 +118,7 @@ export const pageQuery = graphql`
         title
         tags
         fotoimage
+        description
       }
     }
   }
