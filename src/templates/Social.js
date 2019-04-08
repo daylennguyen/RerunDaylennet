@@ -1,46 +1,78 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import {
-  faCodepen,
-  faLinkedin,
-  faFacebook,
-  faGoogle,
-  faTrello,
-  faDribbbleSquare,
-  faTwitterSquare,
+	faCodepen,
+	faLinkedin,
+	faFacebook,
+	faTrello,
+	faDribbbleSquare,
+	faTwitterSquare
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faColumns, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faPencilRuler, faImages } from '@fortawesome/free-solid-svg-icons'
 
-// Left-Social-Media-Bar-Navigation
-export const Social = () => (
-  <div className="social-nav buttons are-medium">
-    <Link to="/" className="button borderhover">
-      <FontAwesomeIcon className="icon inlink" icon={faHome} />
+const ButtonBorderHover = props => {
+	const { icon, to, className, ...otherProps } = props
+	const cn = `button borderhover ${className}`
+	// Will the reference point to an external link or internal (within our domain)
+	return to.charAt(0) === '/' ? (
+		<Link to={ to } className={ cn } { ...otherProps }>
+			<FontAwesomeIcon className="icon" icon={ icon } />
+		</Link>
+	) : (
+			<a href={ to } className={ cn } { ...otherProps }>
+				<FontAwesomeIcon className="icon" icon={ icon } />
+			</a>
+		)
+}
+
+/*
+<Link to="/" className="button borderhover">
+      <FontAwesomeIcon className="icon" icon={faHome} />
     </Link>
     <Link to="/blog" className="button borderhover">
-      <FontAwesomeIcon className="icon inlink" icon={faColumns} />
+      <FontAwesomeIcon className="icon" icon={faColumns} />
     </Link>
     <Link to="/photos" className="button borderhover">
-      <FontAwesomeIcon className="icon inlink" icon={faCameraRetro} />
+      <FontAwesomeIcon className="icon" icon={faCamera} />
     </Link>
-    <a href="https://www.linkedin.com/in/daylen-nguyen/" className="button borderhover">
-      <FontAwesomeIcon className="icon" icon={faLinkedin} />
-    </a>
-    <a href="https://www.facebook.com/daynguyen" className="button borderhover">
-      <FontAwesomeIcon className="icon" icon={faFacebook} />
-    </a>
-    <a href="https://twitter.com/BinaryGood" className="button borderhover">
-      <FontAwesomeIcon className="icon" icon={faTwitterSquare} />
-    </a>
-    <a href="https://dribbble.com/daylennguyen" className="button borderhover">
-      <FontAwesomeIcon className="icon" icon={faDribbbleSquare} />
-    </a>
-    <a href="https://trello.com/flannyan" className="button borderhover">
-      <FontAwesomeIcon className="icon" icon={faTrello} />
-    </a>
-    <a href="https://codesandbox.io/u/daylennguyen" className="button borderhover">
-      <FontAwesomeIcon className="icon" icon={faCodepen} />
-    </a>
-  </div>
+icon, tag, to, className	
+*/
+// Left-Social-Media-Bar-Navigation
+export const Social = () => (
+	<div className="social-nav buttons">
+		<ButtonBorderHover className="nonSocialNavButt" icon={ faHome } to="/" />
+		<ButtonBorderHover
+			className="nonSocialNavButt"
+			icon={ faPencilRuler }
+			to="/blog"
+		/>
+		<ButtonBorderHover
+			className="nonSocialNavButt"
+			icon={ faImages }
+			to="/photos"
+		/>
+
+		<ButtonBorderHover
+			icon={ faLinkedin }
+			to="https://www.linkedin.com/in/daylen-nguyen/"
+		/>
+		<ButtonBorderHover
+			icon={ faTwitterSquare }
+			to="https://twitter.com/BinaryGood"
+		/>
+		<ButtonBorderHover
+			icon={ faCodepen }
+			to="https://codesandbox.io/u/daylennguyen"
+		/>
+		<ButtonBorderHover
+			icon={ faFacebook }
+			to="https://www.facebook.com/daynguyen"
+		/>
+		<ButtonBorderHover
+			icon={ faDribbbleSquare }
+			to="https://dribbble.com/daylennguyen"
+		/>
+		<ButtonBorderHover icon={ faTrello } to="https://trello.com/flannyan" />
+	</div>
 )

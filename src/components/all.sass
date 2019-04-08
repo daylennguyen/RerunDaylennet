@@ -447,15 +447,23 @@ footer.footer
 	// height: 100%
 	left: 0
 	& .borderhover
-		opacity: .5
+		// opacity: .5
 		+transition-all
 		border-radius: 0
 		border-color: rgba(178, 180, 246, 0)
 		margin: 0 !important
+		&.nonSocialNavButt 
+			display: flex
+			flex-flow: column
+			justify-content: center
+			align-content: center
+			// & em
+			& .icon
+				color: $Pink
 		& .icon
+			width: 1.37rem
+			height: 1.37rem
 			color: $Tqs
-			& .inlink
-				color: $Yellow
 		&:hover
 			box-shadow: rgba(0, 0, 0, 0.2) 3.5px 12px 15px
 			transform: translateX(5px)
@@ -472,8 +480,8 @@ footer.footer
 		border-radius: 1em
 		background-color: $white-ter
 		margin: .5em
-		width: 1em
-		height: 1em
+		width: 1rem
+		height: 1rem
 		vertical-align: middle
 		display: inline
 
@@ -579,8 +587,8 @@ footer.footer
 
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
-	width: 1.5rem
-	height: 1.5rem
+	// width: 1rem
+	// height: 1rem
 	fill: $primary
 
 .menu-label
