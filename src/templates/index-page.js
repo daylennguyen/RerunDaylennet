@@ -2,31 +2,29 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+
 // Animate on Scroll
 import AOS from 'aos'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointDown } from '@fortawesome/free-solid-svg-icons'
 import HomeBanner from './banner.svg'
+
 // HTML Head
 import Layout from '../components/Layout'
+
 // Side Nav
-import { Social } from './Social'
 import Avatar from '../components/Avatar'
+
 // Btns "Photography Programming Blog"
 import TermCollectionsNav from './TermCollectionsNav'
 import Terminal from '../components/Terminal'
+
 // Showcase Components
 import BlogRoll from '../components/BlogRoll'
 import ProjectsRoll from '../components/ProjectsRoll'
 import PhotoRoll from '../components/PhotoRoll'
 
-export const IndexPageTemplate = ({
-  introHeading,
-  introBody,
-  termTitle,
-  init,
-  replaceList
-}) => {
+export const IndexPageTemplate = ({ termTitle, init, replaceList }) => {
   // waow~ react-hooks!
   useEffect(() => {
     if (AOS.refresh() === undefined) {
@@ -40,14 +38,14 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <div className='flex-center land-wrapper head'>
+      <div className="flex-center land-wrapper head">
         <img
           src={HomeBanner}
-          className='banner'
+          className="banner"
           alt="daylen nguyen .net a website for daylen's web-portfolio"
         />
         <Terminal
-          data-aos='fade'
+          data-aos="fade"
           name={termTitle}
           banner={<Avatar />}
           init={init}
@@ -55,36 +53,35 @@ export const IndexPageTemplate = ({
         >
           <TermCollectionsNav />
         </Terminal>
-        <Social />
-        <a onClick={handleClick} className='button borderhover bounce'>
-          <FontAwesomeIcon className='icon' icon={faHandPointDown} />
+        <a onClick={handleClick} className="button borderhover bounce">
+          <FontAwesomeIcon className="icon" icon={faHandPointDown} />
         </a>
       </div>
-      <section className='content'>
-        <span className='blog'>
-          <div className='container showcase flex-center'>
-            <h1 className='section-title' data-aos='fade'>
-              <Link to='/blog'>Recent Blog Posts</Link>
+      <section className="content">
+        <span className="blog">
+          <div className="container showcase flex-center">
+            <h1 className="section-title" data-aos="fade">
+              <Link to="/blog">Recent Blog Posts</Link>
             </h1>
             <BlogRoll prntcount={2} />
           </div>
         </span>
       </section>
-      <section className='content'>
-        <span className='proj'>
-          <div className='container showcase flex-center'>
-            <h1 className='section-title' data-aos='fade'>
-              <Link to='/projects'>Recent Projects</Link>
+      <section className="content">
+        <span className="proj">
+          <div className="container showcase flex-center">
+            <h1 className="section-title" data-aos="fade">
+              <Link to="/projects">Recent Projects</Link>
             </h1>
             <ProjectsRoll prntcount={3} />
           </div>
         </span>
       </section>
-      <section className='content'>
-        <span className='blog'>
-          <div className='container showcase flex-center'>
-            <h1 className='section-title' data-aos='fade'>
-              <Link to='/photos'>Recent Photos</Link>
+      <section className="content">
+        <span className="blog">
+          <div className="container showcase flex-center">
+            <h1 className="section-title" data-aos="fade">
+              <Link to="/photos">Recent Photos</Link>
             </h1>
             <PhotoRoll prntcount={3} />
           </div>
@@ -102,7 +99,7 @@ IndexPageTemplate.propTypes = {
   introHeading: PropTypes.string,
   introBody: PropTypes.string,
   init: PropTypes.string,
-  replaceList: PropTypes.array
+  replaceList: PropTypes.array,
 }
 
 // Retrieve GQL data, insert into layout_component
@@ -112,8 +109,6 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         banner={frontmatter.banner}
-        introHeading={frontmatter.intro.heading}
-        introBody={frontmatter.intro.body}
         init={frontmatter.terminal.termInit}
         termTitle={frontmatter.terminal.termtitle}
         replaceList={frontmatter.terminal.replaceList}
@@ -125,9 +120,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default IndexPage
@@ -140,10 +135,6 @@ export const pageQuery = graphql`
           termtitle
           termInit
           replaceList
-        }
-        intro {
-          heading
-          body
         }
       }
     }

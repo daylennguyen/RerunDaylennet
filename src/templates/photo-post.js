@@ -9,53 +9,55 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const PhotoPostTemplate = ({
   image,
-  content,
-  contentComponent,
+  author,
   description,
   tags,
   title,
   helmet,
-  date
+  date,
 }) => {
-  const PostContent = contentComponent || Content
-
   return (
-    <section className='section'>
+    <section className="section">
       {helmet || ''}
-      <div className='container content'>
-        <div className='columns'>
-          <div className='column is-10 is-offset-1'>
-            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
+      <div className="container content">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <div className='img-wrapper flex-center'>
+            <div className="img-wrapper flex-center">
               {image ? (
                 <a href={image}>
-                <img
-                className='projroll-img '
-                src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
-                />
+                  <img
+                    className="projroll-img "
+                    src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
+                  />
                 </a>
-                ) : null}
-            <em className="has-text-primary fotoroll-txt"><p>{date}{description ? ` – ${description}` : null}</p></em>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div className='pic-tag-wrapper' style={{ marginTop: `4rem` }}>
-                <h2>Tags</h2>
-                <div className='tags is-primary is-rounded are-medium'>
-                  {tags.map((tag) => (
-                    <span key={`${tag}tag`}>
-                      <Link
-                        className='tag is-primary'
-                        to={`/tags/${kebabCase(tag)}/`}
+              ) : null}
+              <em className="has-text-primary fotoroll-txt">
+                <p>
+                  {date}
+                  {description ? ` – ${description}` : null}
+                  {author ? ` – Taken by ${author}` : null}
+                </p>
+              </em>
+              {tags && tags.length ? (
+                <div className="pic-tag-wrapper" style={{ marginTop: `1rem` }}>
+                  <h2>Tags</h2>
+                  <div className="tags is-primary is-rounded are-medium">
+                    {tags.map(tag => (
+                      <span key={`${tag}tag`}>
+                        <Link
+                          className="tag is-primary"
+                          to={`/tags/${kebabCase(tag)}/`}
                         >
-                        {tag}
-                      </Link>
-                    </span>
-                  ))}
+                          {tag}
+                        </Link>
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ) : null}
+              ) : null}
             </div>
           </div>
         </div>
@@ -66,11 +68,10 @@ export const PhotoPostTemplate = ({
 
 PhotoPostTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  content: PropTypes.node,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
+  author: PropTypes.string,
+  helmet: PropTypes.object,
 }
 
 const PhotoPost = ({ data }) => {
@@ -80,15 +81,14 @@ const PhotoPost = ({ data }) => {
     <Layout>
       <PhotoPostTemplate
         image={post.frontmatter.fotoimage}
-        content={post.html}
-        contentComponent={HTMLContent}
+        author={post.frontmatter.author}
         description={post.frontmatter.description}
         date={post.frontmatter.date}
         helmet={
-          <Helmet titleTemplate='%s | Photo'>
+          <Helmet titleTemplate="%s | Photo">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name='description'
+              name="description"
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
@@ -102,8 +102,8 @@ const PhotoPost = ({ data }) => {
 
 PhotoPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
+    markdownRemark: PropTypes.object,
+  }),
 }
 
 export default PhotoPost
@@ -119,6 +119,7 @@ export const pageQuery = graphql`
         tags
         fotoimage
         description
+        author
       }
     }
   }

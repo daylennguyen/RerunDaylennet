@@ -4767,13 +4767,6 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
-fotorama-react-wrapper@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/fotorama-react-wrapper/-/fotorama-react-wrapper-1.0.2.tgz#cd0c02652754bc7b0289631c27541b2de11253da"
-  integrity sha512-gJK7DETkE9UZRU7vBBJB8Pfm3du1Hj+c1WGyx86aPEUtzn6FmOSh0qebigoGIzooCetdxUImm8b0YdepXIs3Rw==
-  dependencies:
-    react "16.8.3"
-
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
@@ -10337,16 +10330,6 @@ react-with-gesture@^4.0.6:
   resolved "https://registry.yarnpkg.com/react-with-gesture/-/react-with-gesture-4.0.6.tgz#d264cfc9076506471c3ea0d8789869f3b6af75c9"
   integrity sha512-hThnKyqGpPhH95mxHtzCH5mz/JPArErAHGnDi21VHIgKhZaxqCT5KHuUnc13MRt8g1F7YTx1OrgP9gCYFdZOWg==
 
-react@16.8.3:
-  version "16.8.3"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.3.tgz#c6f988a2ce895375de216edcfaedd6b9a76451d9"
-  integrity sha512-3UoSIsEq8yTJuSu0luO1QQWYbgGEILm+eJl2QN/VLDi7hL+EN18M3q3oVZwmVzzBJ3DkM7RMdRwBmZZ+b4IzSA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.13.3"
-
 react@^16.2.0, react@^16.6.3, react@^16.8.1:
   version "16.8.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.2.tgz#83064596feaa98d9c2857c4deae1848b542c9c0c"
@@ -11012,14 +10995,6 @@ sax@>=0.6.0, sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
 scheduler@^0.13.2:
   version "0.13.2"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.2.tgz#969eaee2764a51d2e97b20a60963b2546beff8fa"
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
-scheduler@^0.13.3:
-  version "0.13.4"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.4.tgz#8fef05e7a3580c76c0364d2df5e550e4c9140298"
-  integrity sha512-cvSOlRPxOHs5dAhP9yiS/6IDmVAVxmk33f0CtTJRkmUWcb1Us+t7b1wqdzoC0REw2muC9V5f1L/w5R5uKGaepA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -12583,6 +12558,18 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+use-force-update@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/use-force-update/-/use-force-update-1.0.4.tgz#7e9b55b32b7eb947a2187e5c87e047c7f6c4481b"
+  integrity sha512-/tF1kH4p4KwuJeA9De0hzPXi48JTk9fEwlBnZ8fUOTcDYwKuLiMPVOFrN0RzbcKLgcVog/74kTRCiHfu93ju+g==
+
+use-react-router@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/use-react-router/-/use-react-router-1.0.5.tgz#509d930ad1110f25ff97a88c96c104487f85760f"
+  integrity sha512-huk5DhGio0RYjCngZ+DyTOQ4NqC+hsZ6N78KABkgT6Y2BSJYQkBpqob3gxZBlt+h7Q7YMkH5QZo7mYIW14jhOg==
+  dependencies:
+    use-force-update "^1.0.4"
 
 use@^3.1.0:
   version "3.1.1"

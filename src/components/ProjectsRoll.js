@@ -27,14 +27,21 @@ class ProjectsRoll extends React.Component {
                   key={post.id}
                 >
                   {!!post.frontmatter.featimage ? (
-                    <div
-                      className="projroll-img"
-                      style={{
-                        backgroundImage: `url(${post.frontmatter.featimage}/-/progressive/yes/-/resize/800x/)`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                      }}
-                    />
+                    <Link
+                      className="title has-text-primary is-size-4"
+                      to={post.fields.slug}
+                    >
+                      <div
+                        className="projroll-img"
+                        style={{
+                          backgroundImage: `url(${
+                            post.frontmatter.featimage
+                          }/-/progressive/yes/-/resize/800x/)`,
+                          backgroundPosition: 'center',
+                          backgroundSize: 'cover',
+                        }}
+                      />
+                    </Link>
                   ) : null}
                   <div className="projroll-txt flex-center">
                     <p>

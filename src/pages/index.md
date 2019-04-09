@@ -1,10 +1,8 @@
 ---
-templateKey: "index-page"
+templateKey: 'index-page'
 path: /
-intro:
-  body: main.intro.body
 terminal:
-  termtitle: "Terminal 4 Hoomans"
+  termtitle: 'Terminal 4 Hoomans'
   termInit: "> Hi! I'm Daylen,"
   replaceList:
     - a proud UW Husky

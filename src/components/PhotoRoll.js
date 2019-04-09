@@ -5,45 +5,44 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Img from 'gatsby-image'
 
 class PhotoRoll extends React.Component {
-  render () {
+  render() {
     const { data, prntcount } = this.props
     const { edges: posts } = data.allMarkdownRemark
     console.log(posts)
     let i = 0
     return (
-      <div className='projroll-sect'>
+      <div className="projroll-sect">
         {posts &&
           /* Only display 4 posts */
           posts.slice(0, prntcount || posts.length).map(({ node: post }) => {
             console.log(post.frontmatter.fotoimage)
             return (
               <div
-                className='is-6 showcase-item projroll-item'
-                data-aos='zoom-out'
-                data-aos-duration='600'
+                className="is-6 showcase-item projroll-item"
+                data-aos="zoom-out"
+                data-aos-duration="600"
                 data-aos-delay={i++ * 150}
                 key={post.id}
               >
-                <Link
-                  className='has-text-primary'
-                  to={post.fields.slug}
-                >
+                <Link className="has-text-primary" to={post.fields.slug}>
                   {post.frontmatter.fotoimage ? (
                     <div
-                      className='projroll-img'
+                      className="projroll-img"
                       style={{
-                        backgroundImage: `url(${post.frontmatter.fotoimage}/-/progressive/yes/-/resize/800x/)`,
+                        backgroundImage: `url(${
+                          post.frontmatter.fotoimage
+                        }/-/progressive/yes/-/resize/800x/)`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                       }}
-                      role="img" 
+                      role="img"
                       aria-label={`${post.frontmatter.title}`}
                       title={`${post.frontmatter.title}`}
                     />
                   ) : null}
-                  <div className='fotoroll-txt flex-center is-size-7'>
-                      <em>{`"${post.frontmatter.title}"`}</em>
-                      <em>{post.frontmatter.date}</em>
+                  <div className="fotoroll-txt flex-center is-size-7">
+                    <em>{`"${post.frontmatter.title}"`}</em>
+                    <em>{post.frontmatter.date}</em>
                     <p>{post.excerpt}</p>
                   </div>
                 </Link>
@@ -58,13 +57,13 @@ class PhotoRoll extends React.Component {
 PhotoRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 }
 
 // When asked for blogroll, query-data then stuff it into the components
-export default (props) => {
+export default props => {
   return (
     <StaticQuery
       query={graphql`
