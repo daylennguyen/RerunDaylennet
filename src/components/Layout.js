@@ -4,9 +4,18 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Social } from '../components/Social'
 import Footer from './Footer'
 import './all.sass'
+import { Location, Router } from "@reach/router"
+import { useTransition, animated, config } from 'react-spring'
 
-const TemplateWrapper = ({ children }) => {
-
+const TemplateWrapper = (props) => {
+	const transitions =  useTransition(location, location => location.pathname, {
+		from: { opacity:  0},
+		enter: { opacity: 1},
+		leave: { opacity: 0},
+		config: config.molasses,
+	  })
+	
+	const {children} = props
 	return (
 		<StaticQuery
 			query={ graphql`
@@ -20,6 +29,7 @@ const TemplateWrapper = ({ children }) => {
       }
     `}
 			render={ data => (
+				
 				<div>
 					<Helmet>
 						<html lang="en" className="" />
@@ -100,11 +110,21 @@ const TemplateWrapper = ({ children }) => {
 							/>
 						</svg>
 					</a>
-					<div className="main">
-						<Social />
-						{ children }
-						<Footer />
-					</div>
+											<Social />
+										<div className="main">
+					<Location>
+						{ ({ location }) => {
+							return (transitions.map(({item,props,key}) => {
+								console.log(`key=${key}`)
+								return (
+												<animated.div key={key} style={props}>													
+													{ children }
+												</animated.div>
+							)}))
+						} }
+					</Location>
+										</div>
+											<Footer />
 
 				</div>
 			) }
