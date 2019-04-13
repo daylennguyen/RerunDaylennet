@@ -6,8 +6,8 @@ import Footer from './Footer'
 import './all.sass'
 import { Location, Router } from '@reach/router'
 import { useTransition, animated, config } from 'react-spring'
-
-const TemplateWrapper = (props) => {
+const AnimationWrapper = (props) => {
+  const { location, children } = props
   const transitions = useTransition(location, (location) => location.pathname, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -15,6 +15,17 @@ const TemplateWrapper = (props) => {
     config: config.molasses
   })
 
+    return transitions.map(({ item, props, key }) => {
+      console.log(`item=${item}`)
+      return (
+        <animated.div key={key} style={props}>
+          {children}
+        </animated.div>
+      )
+    })
+}
+
+const TemplateWrapper = (props) => {
   const { children } = props
   return (
     <StaticQuery
@@ -112,16 +123,11 @@ const TemplateWrapper = (props) => {
           <Social />
           <div className='main'>
             <Location>
-              {({ location }) => {
-                return transitions.map(({ item, props, key }) => {
-                  console.log(`item=${item}`)
-                  return (
-                    <animated.div key={key} style={props}>
-                      {children}
-                    </animated.div>
-                  )
-                })
-              }}
+              {(location) => {return (
+                <AnimationWrapper location={location}>
+                  {children}
+                </AnimationWrapper>
+              )}}
             </Location>
           </div>
           <Footer />
