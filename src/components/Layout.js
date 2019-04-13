@@ -114,7 +114,7 @@ const TemplateWrapper = (props) => {
             <Location>
               {({ location }) => {
                 return transitions.map(({ item, props, key }) => {
-                  console.log(`key=${key}`)
+                  console.log(`item=${item}`)
                   return (
                     <animated.div key={key} style={props}>
                       {children}
