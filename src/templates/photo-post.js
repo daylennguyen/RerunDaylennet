@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
 
 export const PhotoPostTemplate = ({
   image,
@@ -22,6 +24,11 @@ export const PhotoPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+          <Link to='photos' className='button'>
+            <FontAwesomeIcon className='icon' icon={faHandLizard} />{' '}
+            <span>Back</span>
+          </Link>
+
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>

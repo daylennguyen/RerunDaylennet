@@ -1,7 +1,10 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import PhotoRoll from '../../components/PhotoRoll'
+import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import {faHandLizard} from '@fortawesome/free-solid-svg-icons'
 export default class PhotosIndexPage extends React.Component {
   render() {
     return (
@@ -24,10 +27,13 @@ export default class PhotosIndexPage extends React.Component {
                     padding: '1rem',
                   }}
                 >
-                  Latest Photos
+                  Photos
                 </h1>
               </div>
             </div>
+            <Link to="../" className="button" >
+              <FontAwesomeIcon className='icon' icon={faHandLizard} /> <span>Back</span>
+            </Link>
             <PhotoRoll />
           </div>
         </section>

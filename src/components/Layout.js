@@ -6,6 +6,8 @@ import Footer from './Footer'
 import './all.sass'
 import { Location, Router } from '@reach/router'
 import { useTransition, animated, config } from 'react-spring'
+import AOS from 'aos'
+
 const AnimationWrapper = (props) => {
   const { location, children } = props
   const transitions = useTransition(location, (location) => location.pathname, {
@@ -15,18 +17,22 @@ const AnimationWrapper = (props) => {
     config: config.molasses
   })
 
-    return transitions.map(({ item, props, key }) => {
-      console.log(`item=${item}`)
-      return (
-        <animated.div key={key} style={props}>
-          {children}
-        </animated.div>
-      )
-    })
+  return transitions.map(({ item, props, key }) => {
+    console.log(`item=${item}`)
+    return (
+      <animated.div key={key} style={props}>
+        {children}
+      </animated.div>
+    )
+  })
 }
 
 const TemplateWrapper = (props) => {
   const { children } = props
+  if (AOS.refresh() === undefined) {
+    AOS.init()
+    console.log("aos initt'd")
+  }
   return (
     <StaticQuery
       query={graphql`
@@ -123,11 +129,13 @@ const TemplateWrapper = (props) => {
           <Social />
           <div className='main'>
             <Location>
-              {(location) => {return (
-                <AnimationWrapper location={location}>
-                  {children}
-                </AnimationWrapper>
-              )}}
+              {(location) => {
+                return (
+                  <AnimationWrapper location={location}>
+                    {children}
+                  </AnimationWrapper>
+                )
+              }}
             </Location>
           </div>
           <Footer />

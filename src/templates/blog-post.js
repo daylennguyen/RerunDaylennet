@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
 
 export const BlogPostTemplate = ({
   content,
@@ -12,17 +14,21 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className='section'>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <div className='container content'>
+        <div className='columns'>
+          <div className='column is-10 is-offset-1'>
+            <Link to='blog' className='button'>
+              <FontAwesomeIcon className='icon' icon={faHandLizard} />{' '}
+              <span>Back</span>
+            </Link>
+            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>
             <p>{description}</p>
@@ -30,11 +36,11 @@ export const BlogPostTemplate = ({
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h2>Tags</h2>
-                <div className="tags is-primary is-rounded are-medium">
-                  {tags.map(tag => (
+                <div className='tags is-primary is-rounded are-medium'>
+                  {tags.map((tag) => (
                     <span key={tag + `tag`}>
                       <Link
-                        className="tag is-primary"
+                        className='tag is-primary'
                         to={`/tags/${kebabCase(tag)}/`}
                       >
                         {tag}
@@ -56,7 +62,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 }
 
 const BlogPost = ({ data }) => {
@@ -69,10 +75,10 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate='%s | Blog'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name='description'
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
@@ -86,8 +92,8 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 
 export default BlogPost

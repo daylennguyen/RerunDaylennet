@@ -6,10 +6,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-
-// 10am Same place
-// Kyle Simmons
-//
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
 
 export const ProjectPostTemplate = ({
   image,
@@ -18,7 +16,7 @@ export const ProjectPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
   const PostContent = contentComponent || Content
   console.log(image)
@@ -37,33 +35,37 @@ export const ProjectPostTemplate = ({
   // x.addListener(myFunction) // Attach listener function on state changes
 
   return (
-    <section className="section">
+    <section className='section'>
       {helmet || ''}
-      <div className="container content ">
-        <div className="columns">
-          <div className="column is-10 is-offset-1 bg-dark-content">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <div className='container content '>
+        <div className='columns'>
+          <div className='column is-10 is-offset-1 bg-dark-content'>
+          <Link to='projects' className='button'>
+            <FontAwesomeIcon className='icon' icon={faHandLizard} />{' '}
+            <span>Back</span>
+          </Link>
+            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>
-            <div className="img-wrapper flex-center">
+            <div className='img-wrapper flex-center'>
               {image ? (
                 <a href={image}>
                   <img
-                    className="projroll-img "
+                    className='projroll-img '
                     src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
                   />
                 </a>
               ) : null}
             </div>
-            <span className="post-txt-wrapper">
+            <span className='post-txt-wrapper'>
               <p>{description}</p>
               <PostContent content={content} />
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
                   <h2>Tags</h2>
-                  <div className="tags is-primary is-rounded are-medium">
-                    {tags.map(tag => (
-                      <span className="tag is-primary" key={`${tag}tag`}>
+                  <div className='tags is-primary is-rounded are-medium'>
+                    {tags.map((tag) => (
+                      <span className='tag is-primary' key={`${tag}tag`}>
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </span>
                     ))}
@@ -84,7 +86,7 @@ ProjectPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 }
 
 const ProjectPost = ({ data }) => {
@@ -98,10 +100,10 @@ const ProjectPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Project">
+          <Helmet titleTemplate='%s | Project'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name='description'
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
@@ -115,8 +117,8 @@ const ProjectPost = ({ data }) => {
 
 ProjectPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 
 export default ProjectPost
