@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
-
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
 
 export default class BlogIndexPage extends React.Component {
   render () {

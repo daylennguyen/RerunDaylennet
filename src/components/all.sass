@@ -127,6 +127,15 @@ body
 	+pushdown
 	+transition-all
 
+.buttons.is-grouped.has-addons.are-medium
+	+touch
+		flex-flow: column
+		a
+			width: 100%
+		& *
+			border-radius: 0
+
+
 .avatar .eyes
 	background: url("/img/eyes_atlas.gif")
 	background-size: 960px 960px
@@ -462,21 +471,21 @@ footer.footer
 			width: 1.37rem
 			height: 1.37rem
 			color: $Tqs
-		&.nonSocialNavButt 
+		&.nonSocialNavButt
 			display: flex
 			flex-flow: column
 			justify-content: center
 			align-content: center
 			background: $Tqs
 			& .icon
-				color: $Background	
+				color: $Background
 		&:hover
 			transform: translateX(5px)
 			opacity: 1
 			border-color: rgba($Tqs, 1)
 			& .icon
 				color: rgba(white, 1)
-			&.nonSocialNavButt 
+			&.nonSocialNavButt
 				background: $Background
 				& .icon
 					color: $Tqs
@@ -535,7 +544,7 @@ footer.footer
 	display: flex
 	font-weight: 700
 	box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 25px
-	background-color: rgba(179, 164, 250, .5)
+	background-color: rgba(179, 164, 250, .8)
 	animation: rollout 1s ease-in 1
 	width: 40%
 	min-height: 321px
@@ -557,6 +566,8 @@ footer.footer
 		background-color: #f8f8f8
 		background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc)
 	.type-wrap
+		background-color: rgba(black, .2)
+		font-weight: 800
 		min-height: 43px
 		content: ""
 		// width: 50%

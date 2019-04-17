@@ -6,9 +6,6 @@ export default class Terminal extends React.Component {
   componentDidMount() {
     const { init, replaceList } = this.props
     // concatenate the init string to each element in replace list
-    // const generateStrings = (init, replaceList) => replaceList.map(replaceList => init + replaceList);
-    // const textList = generateStrings(init, replaceList);
-
     // results in smart backspace
     const options = {
       strings: replaceList,
@@ -41,7 +38,7 @@ export default class Terminal extends React.Component {
               className="type-wrap"
               style={{
                 whiteSpace: 'normal',
-                background: '#282a36',
+                // background: '#282a36',
                 padding: '5px',
               }}
               ref={el => {

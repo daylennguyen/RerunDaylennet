@@ -16,7 +16,7 @@ import Layout from '../components/Layout'
 import Avatar from '../components/Avatar'
 
 // Btns "Photography Programming Blog"
-import TermCollectionsNav from './TermCollectionsNav'
+import TermCollectionsNav from '../components/TermCollectionsNav'
 import Terminal from '../components/Terminal'
 
 // Showcase Components
