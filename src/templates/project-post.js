@@ -6,8 +6,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
+import BackButton from '../components/BackButton'
 
 export const ProjectPostTemplate = ({
   image,
@@ -24,12 +23,9 @@ export const ProjectPostTemplate = ({
     <section className='section'>
       {helmet || ''}
       <div className='container content '>
+        <BackButton />
         <div className='columns'>
           <div className='column is-10 is-offset-1 bg-dark-content'>
-          <Link to='projects' className='button'>
-            <FontAwesomeIcon className='icon' icon={faHandLizard} />{' '}
-            <span>Back</span>
-          </Link>
             <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>

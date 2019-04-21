@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
-
+import BackButton from '../../components/BackButton'
 export default class BlogIndexPage extends React.Component {
   render () {
     return (
@@ -31,9 +28,7 @@ export default class BlogIndexPage extends React.Component {
                 </h1>
               </div>
             </div>
-            <Link to="../" className="button" >
-              <FontAwesomeIcon className='icon' icon={faHandLizard} /> <span>Back</span>
-            </Link>
+            <BackButton/>
             <BlogRoll />
           </div>
         </section>

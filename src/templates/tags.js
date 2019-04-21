@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import BackButton from '../components/BackButton';
 
 class TagRoute extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class TagRoute extends React.Component {
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+          <h2 className="is-size-4 tag button">&#9654;  {post.node.frontmatter.title}</h2>
         </Link>
       </li>
     ))
@@ -23,6 +24,7 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <section className="section">
+        <BackButton/>
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
             <div className="columns">

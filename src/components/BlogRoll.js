@@ -32,14 +32,14 @@ class BlogRoll extends React.Component {
                         {post.frontmatter.title}
                       </Link>
                       <span> &bull; </span>
-                      <span className="subtitle is-size-5 is-block">
-                        {post.frontmatter.date}
-                      </span>
                     </p>
                     <p>
                       {post.excerpt}
                       <br />
                       <br />
+                      <span className="subtitle is-size-5 is-block">
+                        <em><i>{post.frontmatter.date} - by Daylen Nguyen</i></em>
+                      </span>
                       <Link className="button" to={post.fields.slug}>
                         Keep Reading →
                       </Link>

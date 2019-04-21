@@ -4,10 +4,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Social } from '../components/Social'
 import Footer from './Footer'
 import './all.sass'
+import Arrow from '../img/arrow.svg'
 import { Location, Router } from '@reach/router'
 import { useTransition, animated, config } from 'react-spring'
 import AOS from 'aos'
 
+
+// Introduce the PageTransition Animation to the page (react-spring)
 const AnimationWrapper = (props) => {
   const { location, children } = props
   const transitions = useTransition(location, (location) => location.pathname, {
@@ -126,6 +129,7 @@ const TemplateWrapper = (props) => {
               />
             </svg>
           </a>
+
           <Social />
           <div className='main'>
             <Location>

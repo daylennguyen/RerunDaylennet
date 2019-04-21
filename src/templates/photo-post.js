@@ -5,9 +5,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandLizard } from '@fortawesome/free-solid-svg-icons'
+import BackButton from '../components/BackButton'
 
 export const PhotoPostTemplate = ({
   image,
@@ -16,32 +14,32 @@ export const PhotoPostTemplate = ({
   tags,
   title,
   helmet,
-  date,
+  date
 }) => {
   return (
-    <section className="section">
+    <section className='section'>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-          <Link to='photos' className='button'>
-            <FontAwesomeIcon className='icon' icon={faHandLizard} />{' '}
-            <span>Back</span>
-          </Link>
+      <div className='container content'>
+        <div className='columns'>
+          <div className='column is-10 is-offset-1'>
+            <div className='backdrop flex-center'>
+            <span style={{width: '100%'}}>
 
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <BackButton />
+            </span>
+
+            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>
-            <div className="img-wrapper flex-center">
               {image ? (
                 <a href={image}>
                   <img
-                    className="projroll-img "
+                    className='projroll-img '
                     src={`${image}/-/progressive/yes/-/resize/800x/-/stretch/fill/`}
                   />
                 </a>
               ) : null}
-              <em className="has-text-primary fotoroll-txt">
+              <em className='has-text-primary fotoroll-txt'>
                 <p>
                   {date}
                   {description ? ` – ${description}` : null}
@@ -49,13 +47,13 @@ export const PhotoPostTemplate = ({
                 </p>
               </em>
               {tags && tags.length ? (
-                <div className="pic-tag-wrapper" style={{ marginTop: `1rem` }}>
+                <div className='pic-tag-wrapper' style={{ marginTop: `1rem` }}>
                   <h2>Tags</h2>
-                  <div className="tags is-primary is-rounded are-medium">
-                    {tags.map(tag => (
+                  <div className='tags is-primary is-rounded are-medium'>
+                    {tags.map((tag) => (
                       <span key={`${tag}tag`}>
                         <Link
-                          className="tag is-primary"
+                          className='tag is-primary'
                           to={`/tags/${kebabCase(tag)}/`}
                         >
                           {tag}
@@ -78,7 +76,7 @@ PhotoPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 }
 
 const PhotoPost = ({ data }) => {
@@ -92,10 +90,10 @@ const PhotoPost = ({ data }) => {
         description={post.frontmatter.description}
         date={post.frontmatter.date}
         helmet={
-          <Helmet titleTemplate="%s | Photo">
+          <Helmet titleTemplate='%s | Photo'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name='description'
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
@@ -109,8 +107,8 @@ const PhotoPost = ({ data }) => {
 
 PhotoPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 
 export default PhotoPost
