@@ -30,9 +30,22 @@ const AnimationWrapper = (props) => {
   })
 }
 
-const TemplateWrapper = (props) => {
-  const { children } = props
-  return (
+export default class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount(){
+    if (AOS.refresh() === undefined) {
+      AOS.init()
+      console.log("aos initt'd")
+    }
+  }
+
+  render(props) {
+    const { children } = props
+    return (
     <StaticQuery
       query={graphql`
         query HeadingQuery {
@@ -125,15 +138,6 @@ const TemplateWrapper = (props) => {
                 />
             </svg>
           </a>
-
-          <script>
-            {`
-              if (AOS.refresh() === undefined) {
-                AOS.init()
-                console.log("aos initt'd")
-              }
-            `}
-          </script>
           <Social />
           <div className='main'>
             <Location>
@@ -151,6 +155,6 @@ const TemplateWrapper = (props) => {
       )}
     />
   )
-}
+}}
 
 export default TemplateWrapper
