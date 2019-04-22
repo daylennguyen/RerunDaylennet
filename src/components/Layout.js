@@ -30,7 +30,7 @@ const AnimationWrapper = (props) => {
   })
 }
 
-export default class Contact extends React.Component {
+export default class TemplateWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -156,5 +156,3 @@ export default class Contact extends React.Component {
     />
   )
 }}
-
-export default TemplateWrapper
