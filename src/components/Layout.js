@@ -43,8 +43,8 @@ export default class TemplateWrapper extends React.Component {
     }
   }
 
-  render(props) {
-    const { children } = props
+  render() {
+    const { children } = this.props
     return (
     <StaticQuery
       query={graphql`
