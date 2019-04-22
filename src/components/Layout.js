@@ -19,10 +19,7 @@ const AnimationWrapper = (props) => {
     leave: { opacity: 0 },
     config: config.molasses
   })
-  if (AOS.refresh() === undefined) {
-    AOS.init()
-    console.log("aos initt'd")
-  }
+
   return transitions.map(({ item, props, key }) => {
     console.log(`item=${item}`)
     return (
