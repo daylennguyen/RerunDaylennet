@@ -34,7 +34,7 @@ const ButtonBorderHover = (props) => {
 export const Social = () => (
   <span>
     <span className='arrow'>
-      <img src={Arrow} />
+      <img src={Arrow} alt="Use the Side Navigation"/>
       <p>Use Me!</p>
     </span>
     <span className='social-nav buttons'>

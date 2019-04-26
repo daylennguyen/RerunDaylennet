@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({ termTitle, init, replaceList }) => {
     }
   }, [])
   const handleClick = () => {
-    document.querySelector('.blog').scrollIntoView({ behavior: 'smooth' })
+    document.querySelector('.proj').scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -58,16 +58,6 @@ export const IndexPageTemplate = ({ termTitle, init, replaceList }) => {
         </a>
       </div>
       <section className='content'>
-        <span className='blog'>
-          <div className='container showcase flex-center'>
-            <h1 className='section-title' data-aos='fade'>
-              <Link to='/blog'>Recent Blog Posts</Link>
-            </h1>
-            <BlogRoll prntcount={2} />
-          </div>
-        </span>
-      </section>
-      <section className='content'>
         <span className='proj'>
           <div className='container showcase flex-center'>
             <h1 className='section-title' data-aos='fade'>
@@ -87,6 +77,18 @@ export const IndexPageTemplate = ({ termTitle, init, replaceList }) => {
           </div>
         </span>
       </section>
+      <section className='content'>
+        <span className='blog'>
+          <div className='container showcase flex-center'>
+            <h1 className='section-title' data-aos='fade'>
+              <Link to='/blog'>Recent Blog Posts</Link>
+            </h1>
+            <BlogRoll prntcount={2} />
+          </div>
+        </span>
+      </section>
+
+
       <section className='content'>
         <span className='blog'>
           <div className='container showcase flex-center' >
