@@ -57,19 +57,19 @@ export default class Contact extends React.Component {
           <p>
             <label>
               Your name:<br />
-              <input style={{"width":"100%"}} type="text" name="name" onChange={this.handleChange} />
+              <input className="input is-primary" style={{"width":"100%",  "background":"rgba(68, 71, 90, .5)", "color":"white" }} type="text" name="name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input  style={{"width":"100%"}} type="email" name="email" onChange={this.handleChange} />
+              <input  style={{"width":"100%",  "background":"rgba(68, 71, 90, .5)", "color":"white" }} className="input is-primary" type="email" name="email" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Message:<br />
-              <textarea  style={{"width":"100%"}} name="message" onChange={this.handleChange} />
+              <textarea className="input is-primary" style={{"width":"100%", "background":"rgba(68, 71, 90, .5)", "color":"white"  }} name="message" onChange={this.handleChange} />
             </label>
           </p>
           <Recaptcha
