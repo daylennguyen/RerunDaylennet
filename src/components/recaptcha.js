@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <h1>reCAPTCHA 2</h1>
+        <h1>Contact me</h1>
         <form
           name="contact-recaptcha"
           method="post"
@@ -57,19 +57,19 @@ export default class Contact extends React.Component {
           <p>
             <label>
               Your name:<br />
-              <input type="text" name="name" onChange={this.handleChange} />
+              <input style={{"width":"100%"}} type="text" name="name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input type="email" name="email" onChange={this.handleChange} />
+              <input  style={{"width":"100%"}} type="email" name="email" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Message:<br />
-              <textarea name="message" onChange={this.handleChange} />
+              <textarea  style={{"width":"100%"}} name="message" onChange={this.handleChange} />
             </label>
           </p>
           <Recaptcha
