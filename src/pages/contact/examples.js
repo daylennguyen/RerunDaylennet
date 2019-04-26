@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Layout from '../../components/Layout'
-
+import Captcha from '../../components/recaptcha'
 export default class Index extends React.Component {
   render() {
     return (
@@ -40,6 +40,8 @@ export default class Index extends React.Component {
                   imorente/gatsby-netlify-form-example
                 </a>{' '}
                 for a working example.
+                <Captcha/>
+
               </p>
             </div>
           </div>
