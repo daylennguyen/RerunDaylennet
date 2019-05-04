@@ -29,21 +29,18 @@
 <strong>Website Link</strong>
 </a>
 </p>
-
 </p>
-
 <p align="center">
   <em>Note</em>: This repo is based upon the 
   <a href="https://github.com/netlify-templates/gatsby-starter-netlify-cms">Netlify CMS and Gatsby Starter</a>. <br/>
   Do you have suggestions or feedback?<a href="https://github.com/daylennguyen/RerunDaylennet/issues/new"> Open an issue</a>
 </p>
-  
 ## Features
-- [X] [🕶 `Gatsby v2` for Static page generation](https://github.com/gatsbyjs/gatsby/projects/2) 
-- [X] [🤘 `gatsby-plugin-purgecss` for Stylesheet overhead reduction](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/)
+- [X] [🕶 Gatsby v2 for Static page generation](https://github.com/gatsbyjs/gatsby/projects/2) 
+- [X] [🤘 gatsby-plugin-purgecss for Stylesheet overhead reduction](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/)
 - [X] [📷UploadCare Integration for image uploading via cms](https://github.com/gatsbyjs/gatsby/projects/2) 
-- [X] [🍌 `bulma` CSS baseline && Bulma builds are usually ~170K but reduced 90% by purgecss.](https://bulma.io/). 
-- [ ] `🤩 Page Transitions and avatar animation` with react-spring
+- [X] [🍌 Bulma CSS baseline && Bulma builds are usually ~170K but reduced 90% by purgecss.](https://bulma.io/). 
+- [X] [👌Page Transitions and avatar animation` with react-spring]
 ## File Structure
 
 - [`src/pages/`](src/pages/)
