@@ -35,7 +35,9 @@
   <a href="https://github.com/netlify-templates/gatsby-starter-netlify-cms">Netlify CMS and Gatsby Starter</a>. <br/>
   Do you have suggestions or feedback?<a href="https://github.com/daylennguyen/RerunDaylennet/issues/new"> Open an issue</a>
 </p>
-## Features
+
+## Features  
+
 - [X] [🕶 Gatsby v2 for Static page generation](https://github.com/gatsbyjs/gatsby/projects/2) 
 - [X] [🤘 gatsby-plugin-purgecss for Stylesheet overhead reduction](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/)
 - [X] [📷UploadCare Integration for image uploading via cms](https://github.com/gatsbyjs/gatsby/projects/2) 
