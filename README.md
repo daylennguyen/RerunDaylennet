@@ -42,7 +42,7 @@
 - [X] [🤘 gatsby-plugin-purgecss for Stylesheet overhead reduction](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/)
 - [X] [📷UploadCare Integration for image uploading via cms](https://github.com/gatsbyjs/gatsby/projects/2) 
 - [X] [🍌 Bulma CSS baseline && Bulma builds are usually ~170K but reduced 90% by purgecss.](https://bulma.io/). 
-- [X] [👌Page Transitions and avatar animation` with react-spring](https://www.react-spring.io/)
+- [X] [👌Page Transitions and avatar animation with react-spring](https://www.react-spring.io/)
 ## File Structure
 
 - [`src/pages/`](src/pages/)
