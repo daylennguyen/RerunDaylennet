@@ -42,7 +42,7 @@
     "react-spring": "^8.0.9",
     "react-with-gesture": "^4.0.6",
     "redux": "^3.7.2",
-    "slate": "0.32.0",
+    "slate": "0.58.1",
     "typed.js": "^2.0.10",
     "uuid": "^3.2.1"
   },
