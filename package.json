@@ -27,7 +27,7 @@
     "gatsby-transformer-remark": "^2.8.13",
     "gatsby-transformer-sharp": "^2.5.3",
     "graphql": "^14.1.1",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.4.2",
     "netlify-cms-ui-default": "2.0.0",
