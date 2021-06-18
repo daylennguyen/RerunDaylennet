@@ -32,7 +32,7 @@
     "netlify-cms": "^2.4.2",
     "netlify-cms-ui-default": "2.0.0",
     "node-sass": "^4.11.0",
-    "parcel-bundler": "^1.9.4",
+    "parcel-bundler": "^1.12.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
