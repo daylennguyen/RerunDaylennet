@@ -10,25 +10,7 @@ import { useTransition, animated, config } from 'react-spring'
 import AOS from 'aos'
 
 
-// Introduce the PageTransition Animation to the page (react-spring)
-const AnimationWrapper = (props) => {
-  const { location, children } = props
-  const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-    config: config.molasses
-  })
-
-  return transitions.map(({ item, props, key }) => {
-    console.log(`item=${item}`)
-    return (
-      <animated.div key={key} style={props}>
-        {children}
-      </animated.div>
-    )
-  })
-}
+const AnimationWrapper = ({ children }) => <div>{children}</div>
 
 export default class TemplateWrapper extends React.Component {
   constructor(props) {

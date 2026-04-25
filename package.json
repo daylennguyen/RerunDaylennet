@@ -31,8 +31,7 @@
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.4.2",
     "netlify-cms-ui-default": "2.0.0",
-    "node-sass": "^4.11.0",
-    "parcel-bundler": "^1.12.5",
+    "sass": "^1.77.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
@@ -44,8 +43,7 @@
     "redux": "^3.7.2",
     "slate": "0.32.0",
     "typed.js": "^2.0.10",
-    "uuid": "^3.2.1",
-    "snyk": "^1.489.0"
+    "uuid": "^3.2.1"
   },
   "keywords": [
     "gatsby"
@@ -59,9 +57,7 @@
     "develop": "yarn run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -74,6 +70,5 @@
     "install-peers": "^1.0.3",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
-  },
-  "snyk": true
+  }
 }

@@ -72,11 +72,13 @@ export default class Contact extends React.Component {
               <textarea className="input is-primary" style={{"width":"100%", "background":"rgba(68, 71, 90, .5)", "color":"white"  }} name="message" onChange={this.handleChange} />
             </label>
           </p>
-          <Recaptcha
-            ref="recaptcha"
-            sitekey={RECAPTCHA_KEY}
-            onChange={this.handleRecaptcha}
-          />
+          {RECAPTCHA_KEY && (
+            <Recaptcha
+              ref="recaptcha"
+              sitekey={RECAPTCHA_KEY}
+              onChange={this.handleRecaptcha}
+            />
+          )}
           <p>
             <button type="submit">Send</button>
           </p>
