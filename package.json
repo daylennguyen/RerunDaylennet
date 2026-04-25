@@ -4,7 +4,7 @@
   "version": "1.0",
   "author": "Daylen Nguyen",
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
