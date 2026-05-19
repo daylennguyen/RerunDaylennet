@@ -496,3 +496,21 @@ patch:
         path: >-
           gatsby > babel-preset-gatsby > @babel/preset-env >
           @babel/preset-modules > @babel/types > lodash
+    - gatsby > @sigmacomputing/babel-plugin-lodash > lodash:
+        patched: '2026-05-19T14:52:24.969Z'
+        id: SNYK-JS-LODASH-567746
+        path: gatsby > @sigmacomputing/babel-plugin-lodash > lodash
+    - gatsby > @sigmacomputing/babel-plugin-lodash > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2026-05-19T14:52:24.969Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          gatsby > @sigmacomputing/babel-plugin-lodash >
+          @babel/helper-module-imports > @babel/types > lodash
+    - gatsby > @graphql-codegen/typescript > @graphql-codegen/visitor-plugin-common > @graphql-tools/relay-operation-optimizer > @ardatan/relay-compiler > @babel/types > lodash:
+        patched: '2026-05-19T14:52:24.969Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          gatsby > @graphql-codegen/typescript >
+          @graphql-codegen/visitor-plugin-common >
+          @graphql-tools/relay-operation-optimizer > @ardatan/relay-compiler >
+          @babel/types > lodash
