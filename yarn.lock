@@ -2847,10 +2847,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@snyk/protect@^1.1304.2":
-  version "1.1304.2"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1304.2.tgz#a142df7fd0a86335b0f0983cf7e44b44fa9fa2f4"
-  integrity sha512-0kYSSdfNa7Xua4qYvVU20zkyzCRvTdcGiOHuR9KnQk5LnBx9+blK/NtFK2Qup268QeTIFpCw1KMoynIShSZ9Aw==
+"@snyk/protect@latest":
+  version "1.1305.1"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1305.1.tgz#d7ac9965e885835e33e3e889f27ad2f64996f215"
+  integrity sha512-O4hvS4MjdNS5ya9UBvxaLODHm5/ojZ19AnP9YSM2uxNaWUjCShb6iQy3YkK7QMILqkWlvL5uax6cXp9W+J/Eow==
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.2"
@@ -15019,9 +15019,9 @@ shebang-regex@^3.0.0:
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
 shell-quote@^1.7.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.3.tgz#55e40ef33cf5c689902353a3d8cd1a6725f08b4b"
-  integrity sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.4.tgz#2edd9a4dcefc96649e2e2cb12f637b1f1d92a190"
+  integrity sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==
 
 side-channel-list@^1.0.0:
   version "1.0.1"
