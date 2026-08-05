@@ -2847,10 +2847,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@snyk/protect@^1.1304.2":
-  version "1.1304.2"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1304.2.tgz#a142df7fd0a86335b0f0983cf7e44b44fa9fa2f4"
-  integrity sha512-0kYSSdfNa7Xua4qYvVU20zkyzCRvTdcGiOHuR9KnQk5LnBx9+blK/NtFK2Qup268QeTIFpCw1KMoynIShSZ9Aw==
+"@snyk/protect@latest":
+  version "1.1306.2"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1306.2.tgz#adb3f399b22db1102b74d28e6eec1ee144c5eb69"
+  integrity sha512-XhbU76Z/4TJ2Szv0wI8L5K061w9196xtND7MYr/CgNUI2aGqlPSvOwe4uXJ2oYYGYm5ZJ+IndKviRPMU5imPWw==
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.2"
@@ -7204,9 +7204,9 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
 fast-uri@^3.0.1:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.1.2.tgz#8af3d4fc9d3e71b11572cc2673b514a7d1a8c8ec"
-  integrity sha512-rVjf7ArG3LTk+FS6Yw81V1DLuZl1bRbNrev6Tmd/9RaroeeRRJhAt7jg/6YFxbvAQXUCavSoZhPPj6oOx+5KjQ==
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.1.5.tgz#610f37419a030270430cecd68d74e3d4d96725d0"
+  integrity sha512-gHwA1O9LDIcKunMKhObS/HimwtehO1nPUECKAu5TpKgaO19fcWEl4bliWe1jWxVFvIXztJjjQ4L8XQ1EU9f7Jw==
 
 fastest-levenshtein@^1.0.16:
   version "1.0.16"
