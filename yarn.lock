@@ -2847,10 +2847,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@snyk/protect@^1.1304.2":
-  version "1.1304.2"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1304.2.tgz#a142df7fd0a86335b0f0983cf7e44b44fa9fa2f4"
-  integrity sha512-0kYSSdfNa7Xua4qYvVU20zkyzCRvTdcGiOHuR9KnQk5LnBx9+blK/NtFK2Qup268QeTIFpCw1KMoynIShSZ9Aw==
+"@snyk/protect@latest":
+  version "1.1306.2"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1306.2.tgz#adb3f399b22db1102b74d28e6eec1ee144c5eb69"
+  integrity sha512-XhbU76Z/4TJ2Szv0wI8L5K061w9196xtND7MYr/CgNUI2aGqlPSvOwe4uXJ2oYYGYm5ZJ+IndKviRPMU5imPWw==
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.2"
@@ -15282,9 +15282,9 @@ socket.io-client@^4.8.1:
     socket.io-parser "~4.2.4"
 
 socket.io-parser@~4.2.4:
-  version "4.2.6"
-  resolved "https://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-4.2.6.tgz#19156bf179af3931abd05260cfb1491822578a6f"
-  integrity sha512-asJqbVBDsBCJx0pTqw3WfesSY0iRX+2xzWEWzrpcH7L6fLzrhyF8WPI8UaeM4YCuDfpwA/cgsdugMsmtz8EJeg==
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-4.2.7.tgz#679e51fe24d1c81df90fc5f7efe4a5f432fe99c0"
+  integrity sha512-IH/iSeO9T6gz1KkFleGDWkG9N3dl4jXVYUtMhIqH10Md0ttMer8nUNWiP1DKuNrybD2xBrixLJdCC9J6ECoYkg==
   dependencies:
     "@socket.io/component-emitter" "~3.1.0"
     debug "~4.4.1"
