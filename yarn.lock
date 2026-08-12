@@ -2847,10 +2847,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@snyk/protect@^1.1304.2":
-  version "1.1304.2"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1304.2.tgz#a142df7fd0a86335b0f0983cf7e44b44fa9fa2f4"
-  integrity sha512-0kYSSdfNa7Xua4qYvVU20zkyzCRvTdcGiOHuR9KnQk5LnBx9+blK/NtFK2Qup268QeTIFpCw1KMoynIShSZ9Aw==
+"@snyk/protect@latest":
+  version "1.1306.3"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1306.3.tgz#b7a9f559fc0d4d3f0a0ce4ca2c11af3a973c86fc"
+  integrity sha512-u+VW1RgYm7Z4/NsgP4rU3frjy7nc1PUQWsEOVVZORCm1DdG/fzTRsf8loLhTVj7+1cuOzStI9cibzszgrECHmQ==
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.2"
@@ -11502,9 +11502,9 @@ mute-stream@0.0.8, mute-stream@~0.0.4:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
 
 nanoid@^3.3.11:
-  version "3.3.12"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.12.tgz#ab3d912e217a6d0a514f00a72a16543a28982c05"
-  integrity sha512-ZB9RH/39qpq5Vu6Y+NmUaFhQR6pp+M2Xt76XBnEwDaGcVAqhlvxrl3B2bKS5D3NH3QR76v3aSrKaF/Kiy7lEtQ==
+  version "3.3.18"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.18.tgz#f66a2de1199ffde0fcf21c8a5f13106b1c081913"
+  integrity sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==
 
 napi-build-utils@^2.0.0:
   version "2.0.0"
